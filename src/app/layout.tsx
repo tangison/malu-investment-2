@@ -17,36 +17,38 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Malu Investment CC — Moving Okahandja Forward",
+  title: "Malu Investment CC — Moving Namibia Forward",
   description:
-    "Professional transport, construction, logistics, and cleaning services in Okahandja, Namibia. Registered CC (CC/2017/00248). Trusted. Local. Reliable.",
+    "Okahandja-founded close corporation operating nationally. Transport, construction, logistics, cleaning — and MI-WAY fleet management software. CC/2017/00248.",
   keywords: [
     "Malu Investment",
     "Okahandja",
-    "taxi",
-    "transport",
     "Namibia",
     "close corporation",
+    "MI-WAY",
+    "fleet management",
+    "taxi",
+    "transport",
     "construction",
     "logistics",
-    "cleaning services",
+    "cleaning",
   ],
   authors: [{ name: "Malu Investment CC" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/brand/malu-investment-icon.webp",
   },
   openGraph: {
-    title: "Malu Investment CC — Moving Okahandja Forward",
+    title: "Malu Investment CC — Moving Namibia Forward",
     description:
-      "Professional transport, construction, logistics, and cleaning services. Registered. Trusted. Local.",
+      "Okahandja-founded, operating nationally. Transport, construction, logistics, cleaning — and MI-WAY fleet management.",
     type: "website",
     locale: "en_NA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Malu Investment CC — Moving Okahandja Forward",
+    title: "Malu Investment CC — Moving Namibia Forward",
     description:
-      "Professional transport, construction, logistics, and cleaning services in Okahandja, Namibia.",
+      "Okahandja-founded, operating nationally. Transport, construction, logistics, cleaning — and MI-WAY fleet management.",
   },
 };
 
@@ -58,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${plusJakarta.variable} antialiased bg-malu-obsidian text-malu-cream`}
+        className={`${outfit.variable} ${plusJakarta.variable} antialiased bg-malu-cream text-malu-navy`}
       >
         {children}
       </body>

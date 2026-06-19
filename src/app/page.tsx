@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
+import MiWay from "@/components/MiWay";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Services />
+        <MiWay />
         <About />
         <CTABanner />
       </main>

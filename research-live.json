@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://vercel.com",
+    "name": "Vercel",
+    "snippet": "For coding agents to deploy in their native language, with Vercel's API, CLI, MCP, and Skills. ; To ship apps and agents in Sandboxed VMs, with durable backends, ...",
+    "host_name": "vercel.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/shorts/BDXIpktNOFE",
+    "name": "Vercel's Guillermo Rauch on monetizing apps in v0 - YouTube",
+    "snippet": "Vercel's Guillermo Rauch on monetizing apps in v0. 84. Dislike. 1. Share. Video unavailable. This content isn't available. Skip video.",
+    "host_name": "www.youtube.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://portfolio-i.vercel.app",
+    "name": "Portfolio",
+    "snippet": "I'm a self taught fullstack developer that has always had a flare for building softwares. I was first introduced to programming in 2018 with the language JAVA.",
+    "host_name": "portfolio-i.vercel.app",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://vercel.com/new",
+    "name": "New Project - Vercel",
+    "snippet": "An Eve template for Slack agents with webhook handling, Vercel Connect, a starter agent, and an example tool ready to deploy on Vercel. Eve Slack Agent. Express ...",
+    "host_name": "vercel.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://malu-ai-ahmad-zandnias-projects.vercel.app",
+    "name": "Malu",
+    "snippet": "Your alien friend is here! Meet Malu!",
+    "host_name": "malu-ai-ahmad-zandnias-projects.vercel.app",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

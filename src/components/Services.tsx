@@ -2,56 +2,58 @@ const services = [
   {
     title: "Taxi Transport",
     description:
-      "Reliable point-to-point rides across Okahandja and surrounding areas. Day or night, we get you where you need to be — safely and on time.",
+      "Reliable point-to-point rides across Okahandja and surrounding areas. Day or night, rain or shine — we show up.",
     status: "Active",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 002 12v4c0 .6.4 1 1 1h2" />
-        <circle cx="7" cy="17" r="2" />
-        <path d="M9 17h6" />
-        <circle cx="17" cy="17" r="2" />
+        <circle cx="7" cy="17" r="2" /><path d="M9 17h6" /><circle cx="17" cy="17" r="2" />
       </svg>
     ),
   },
   {
     title: "Construction & Renovation",
     description:
-      "From new builds to renovations, our skilled team handles residential and commercial construction projects with precision and care.",
+      "Residential and commercial building projects. From new builds to renovations — quality work, honest timelines.",
     status: "Coming Soon",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="6" width="20" height="8" rx="1" />
-        <path d="M17 14v7" />
-        <path d="M7 14v7" />
-        <path d="M17 3v3" />
-        <path d="M7 3v3" />
-        <path d="M10 14 2.3 6.3" />
-        <path d="M14 6 21.7 13.7" />
-        <path d="M8 6h8" />
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="6" width="20" height="8" rx="1" /><path d="M17 14v7" /><path d="M7 14v7" /><path d="M17 3v3" /><path d="M7 3v3" />
       </svg>
     ),
   },
   {
     title: "Logistics & Import/Export",
     description:
-      "Efficient goods movement and supply chain support. We help your business move products across borders and within Namibia.",
+      "Goods movement across Namibia and borders. Supply chain support that keeps your business moving.",
     status: "Coming Soon",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 03 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 021 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" />
       </svg>
     ),
   },
   {
     title: "Cleaning & Carwash",
     description:
-      "Professional cleaning for homes, offices, and vehicles. We take pride in leaving every space spotless and every car gleaming.",
+      "Professional cleaning for homes, offices, and vehicles. Every space spotless, every car gleaming.",
     status: "Coming Soon",
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "MI-WAY Fleet Software",
+    description:
+      "Our own taxi fleet dispatch and management platform. Built from the road up, by people who know the business.",
+    status: "In Development",
+    isMiWay: true,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
   },
@@ -59,57 +61,56 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative bg-malu-obsidian py-24 sm:py-32">
-      {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-malu-gold/20 to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        {/* Section header */}
-        <div className="mb-16 sm:mb-20">
+    <section id="services" className="relative bg-malu-cream py-20 sm:py-28">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-14 sm:mb-18">
           <span className="text-malu-gold font-[var(--font-outfit)] text-[11px] uppercase tracking-[0.3em] font-medium">
             What We Do
           </span>
-          <h2 className="font-[var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-extrabold text-malu-cream tracking-tight mt-3">
+          <h2 className="font-[var(--font-outfit)] text-3xl sm:text-4xl md:text-5xl font-extrabold text-malu-navy tracking-tight mt-3">
             Our Services
           </h2>
-          <div className="w-14 h-0.5 bg-malu-gold mt-5" />
-          <p className="text-malu-cream/40 font-[var(--font-plus-jakarta)] text-base sm:text-lg mt-6 max-w-lg leading-relaxed">
-            From your daily commute to major construction projects, Malu Investment CC is building Okahandja&apos;s future — one service at a time.
+          <div className="w-12 h-0.5 bg-malu-gold mt-4" />
+          <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-base sm:text-lg mt-5 max-w-lg leading-relaxed">
+            From daily transport to fleet technology — Malu Investment CC is building Namibia&apos;s future across every sector we touch.
           </p>
         </div>
 
-        {/* Service cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
-          {services.map((service, i) => (
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service) => (
             <div
               key={service.title}
-              className={`group relative overflow-hidden transition-all duration-500 hover:-translate-y-1 ${
-                i === 0
-                  ? "bg-malu-gold/[0.06] border border-malu-gold/30 hover:border-malu-gold/50"
-                  : "bg-malu-charcoal/40 border border-malu-cream/[0.06] hover:border-malu-gold/20"
+              className={`group relative overflow-hidden transition-all duration-400 hover:-translate-y-0.5 ${
+                service.isMiWay
+                  ? "bg-miway-navy border border-miway-silver/20 hover:border-malu-gold/30 sm:col-span-2 lg:col-span-1"
+                  : service.status === "Active"
+                  ? "bg-malu-white border-2 border-malu-gold/30 hover:border-malu-gold/50"
+                  : "bg-malu-white border border-malu-sand hover:border-malu-gold/25"
               }`}
             >
-              {/* Hover glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-malu-gold/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative z-10 p-7 sm:p-8">
+              <div className="p-6 sm:p-7">
                 {/* Icon + Status */}
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start justify-between mb-5">
                   <div
-                    className={`w-14 h-14 flex items-center justify-center border transition-colors duration-300 ${
-                      i === 0
-                        ? "border-malu-gold/40 text-malu-gold group-hover:bg-malu-gold/10"
-                        : "border-malu-cream/10 text-malu-cream/30 group-hover:border-malu-gold/30 group-hover:text-malu-gold/60"
+                    className={`w-12 h-12 flex items-center justify-center border transition-colors duration-300 ${
+                      service.isMiWay
+                        ? "border-miway-silver/30 text-miway-silver group-hover:bg-miway-silver/10 group-hover:text-malu-gold"
+                        : service.status === "Active"
+                        ? "border-malu-gold/30 text-malu-gold group-hover:bg-malu-gold/5"
+                        : "border-malu-sand text-malu-text-muted/40 group-hover:border-malu-gold/25 group-hover:text-malu-gold/60"
                     }`}
                   >
                     {service.icon}
                   </div>
-
                   <span
-                    className={`font-[var(--font-outfit)] text-[10px] uppercase tracking-[0.2em] font-semibold px-3 py-1 ${
+                    className={`font-[var(--font-outfit)] text-[10px] uppercase tracking-[0.18em] font-semibold px-2.5 py-1 ${
                       service.status === "Active"
-                        ? "text-malu-gold bg-malu-gold/10 border border-malu-gold/20"
-                        : "text-malu-cream/25 border border-malu-cream/[0.08]"
+                        ? "text-malu-gold bg-malu-gold/[0.08] border border-malu-gold/20"
+                        : service.status === "In Development"
+                        ? "text-miway-silver bg-miway-silver/[0.08] border border-miway-silver/15"
+                        : "text-malu-text-muted/40 border border-malu-sand/60"
                     }`}
                   >
                     {service.status}
@@ -118,46 +119,36 @@ export default function Services() {
 
                 {/* Title */}
                 <h3
-                  className={`font-[var(--font-outfit)] text-xl sm:text-2xl font-bold tracking-tight mb-3 ${
-                    i === 0 ? "text-malu-gold" : "text-malu-cream group-hover:text-malu-gold/80"
+                  className={`font-[var(--font-outfit)] text-lg font-bold tracking-tight mb-2 ${
+                    service.isMiWay
+                      ? "text-miway-silver-light group-hover:text-malu-gold"
+                      : service.status === "Active"
+                      ? "text-malu-navy"
+                      : "text-malu-navy group-hover:text-malu-gold/80"
                   } transition-colors duration-300`}
                 >
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-malu-cream/40 font-[var(--font-plus-jakarta)] text-sm leading-relaxed mb-5">
+                <p className={`font-[var(--font-plus-jakarta)] text-sm leading-relaxed mb-4 ${
+                  service.isMiWay ? "text-miway-silver/50" : "text-malu-text-muted"
+                }`}>
                   {service.description}
                 </p>
 
-                {/* Learn more link */}
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`font-[var(--font-outfit)] text-xs uppercase tracking-[0.15em] font-medium transition-colors duration-300 ${
-                      i === 0
-                        ? "text-malu-gold/70 group-hover:text-malu-gold"
-                        : "text-malu-cream/20 group-hover:text-malu-gold/60"
-                    }`}
+                {/* Link */}
+                {service.isMiWay && (
+                  <a
+                    href="#miway"
+                    className="inline-flex items-center gap-1.5 text-miway-silver/60 hover:text-malu-gold font-[var(--font-outfit)] text-xs uppercase tracking-[0.12em] font-medium transition-colors duration-300"
                   >
                     Learn More
-                  </span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className={`transition-all duration-300 group-hover:translate-x-1 ${
-                      i === 0 ? "text-malu-gold/70" : "text-malu-cream/20"
-                    }`}
-                  >
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </div>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform">
+                      <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
           ))}
