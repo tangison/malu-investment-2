@@ -42,18 +42,19 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* ── Malu Investment Brand ── */
+  /* ── Malu Investment Brand — Light Theme ── */
   --color-malu-navy: #15233F;
-  --color-malu-navy-deep: #0E1A2E;
-  --color-malu-navy-light: #1D3054;
+  --color-malu-navy-light: #1E3358;
+  --color-malu-navy-pale: #E8EDF5;
   --color-malu-gold: #A9802D;
   --color-malu-gold-light: #C49A3E;
-  --color-malu-gold-muted: #8A6A24;
-  --color-malu-cream: #FAF7F0;
-  --color-malu-sand: #E8DFD0;
+  --color-malu-gold-muted: #D4B870;
   --color-malu-white: #FFFFFF;
-  --color-malu-text: #1A1A1A;
-  --color-malu-text-muted: #6B7280;
+  --color-malu-cream: #F8F6F1;
+  --color-malu-sand: #E8DFD0;
+  --color-malu-text: #1A1A2E;
+  --color-malu-text-muted: #5A6478;
+  --color-malu-border: #E2DED5;
 
   /* ── MI-WAY Sub-brand ── */
   --color-miway-navy: #1A2740;
@@ -65,7 +66,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #FAF7F0;
+  --background: #FFFFFF;
   --foreground: #15233F;
   --card: #FFFFFF;
   --card-foreground: #15233F;
@@ -73,62 +74,62 @@
   --popover-foreground: #15233F;
   --primary: #15233F;
   --primary-foreground: #FFFFFF;
-  --secondary: #E8DFD0;
+  --secondary: #F0EBE3;
   --secondary-foreground: #15233F;
-  --muted: #F0EBE3;
-  --muted-foreground: #6B7280;
+  --muted: #F5F3EE;
+  --muted-foreground: #5A6478;
   --accent: #A9802D;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #E8DFD0;
-  --input: #E8DFD0;
+  --border: #E2DED5;
+  --input: #E2DED5;
   --ring: #A9802D;
   --chart-1: #A9802D;
   --chart-2: #15233F;
   --chart-3: #E8DFD0;
   --chart-4: #1A2740;
-  --chart-5: #6B7280;
+  --chart-5: #5A6478;
   --sidebar: #15233F;
-  --sidebar-foreground: #FAF7F0;
+  --sidebar-foreground: #FFFFFF;
   --sidebar-primary: #A9802D;
   --sidebar-primary-foreground: #15233F;
-  --sidebar-accent: #1D3054;
-  --sidebar-accent-foreground: #FAF7F0;
-  --sidebar-border: rgba(169, 128, 45, 0.2);
+  --sidebar-accent: #1E3358;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(169,128,45,0.2);
   --sidebar-ring: #A9802D;
 }
 
 .dark {
   --background: #0E1A2E;
-  --foreground: #FAF7F0;
+  --foreground: #F8F6F1;
   --card: #15233F;
-  --card-foreground: #FAF7F0;
+  --card-foreground: #F8F6F1;
   --popover: #15233F;
-  --popover-foreground: #FAF7F0;
+  --popover-foreground: #F8F6F1;
   --primary: #A9802D;
   --primary-foreground: #15233F;
-  --secondary: #1D3054;
-  --secondary-foreground: #FAF7F0;
-  --muted: #1D3054;
+  --secondary: #1E3358;
+  --secondary-foreground: #F8F6F1;
+  --muted: #1E3358;
   --muted-foreground: #8A94A6;
   --accent: #A9802D;
   --accent-foreground: #15233F;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgba(169, 128, 45, 0.2);
-  --input: rgba(169, 128, 45, 0.2);
+  --border: rgba(169,128,45,0.2);
+  --input: rgba(169,128,45,0.2);
   --ring: #A9802D;
   --chart-1: #A9802D;
-  --chart-2: #FAF7F0;
-  --chart-3: #1D3054;
+  --chart-2: #F8F6F1;
+  --chart-3: #1E3358;
   --chart-4: #C0C8D4;
   --chart-5: #8A94A6;
   --sidebar: #0E1A2E;
-  --sidebar-foreground: #FAF7F0;
+  --sidebar-foreground: #F8F6F1;
   --sidebar-primary: #A9802D;
   --sidebar-primary-foreground: #0E1A2E;
   --sidebar-accent: #15233F;
-  --sidebar-accent-foreground: #FAF7F0;
-  --sidebar-border: rgba(169, 128, 45, 0.2);
+  --sidebar-accent-foreground: #F8F6F1;
+  --sidebar-border: rgba(169,128,45,0.2);
   --sidebar-ring: #A9802D;
 }
 
@@ -141,24 +142,19 @@
   }
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* Custom scrollbar — navy/gold */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0E1A2E; }
-::-webkit-scrollbar-thumb { background: rgba(169,128,45,0.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(169,128,45,0.5); }
+::-webkit-scrollbar-track { background: #f5f3ee; }
+::-webkit-scrollbar-thumb { background: rgba(21,35,63,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(21,35,63,0.3); }
 
-/* Gold shimmer text */
 @keyframes gold-shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
 }
 .animate-gold-shimmer {
-  background: linear-gradient(90deg, #A9802D 0%, #C49A3E 25%, #E8DFD0 50%, #C49A3E 75%, #A9802D 100%);
+  background: linear-gradient(90deg, #A9802D 0%, #C49A3E 25%, #D4B870 50%, #C49A3E 75%, #A9802D 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -166,29 +162,14 @@ html {
   animation: gold-shimmer 5s linear infinite;
 }
 
-/* Fade in up */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
 
-/* Pulse ring for live badge */
-@keyframes pulse-ring {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(2); opacity: 0; }
-}
-.animate-pulse-ring {
-  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-}
-
-/* Subtle float */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+.animate-float { animation: float 6s ease-in-out infinite; }

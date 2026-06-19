@@ -1,18 +1,11 @@
+import Image from "next/image";
+
 export default function About() {
   return (
-    <section id="about" className="relative bg-malu-sand/40 py-20 sm:py-28 overflow-hidden">
-      {/* Dot pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.3]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #A9802D20 0.5px, transparent 0)`,
-          backgroundSize: "32px 32px",
-        }}
-      />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative bg-malu-cream py-20 sm:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-          {/* Left — Narrative */}
+          {/* Left — Photo + narrative */}
           <div>
             <span className="text-malu-gold font-[var(--font-outfit)] text-[11px] uppercase tracking-[0.3em] font-medium">
               Our Story
@@ -32,57 +25,46 @@ export default function About() {
                 Registered in 2017 as Close Corporation CC/2017/00248, we&apos;ve grown from a local taxi operator into a multi-service company serving the Otjozondjupa Region and beyond. But growth hasn&apos;t changed who we are. We still answer every call. We still know every street.
               </p>
               <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-base leading-[1.8]">
-                Today, we&apos;re expanding into construction, logistics, and cleaning — and building MI-WAY, our own fleet management platform. Our goal: full Namibia coverage. When you work with Malu, you work with a partner who&apos;s in it for the long haul.
+                Today, we&apos;re expanding into construction, logistics, and cleaning — and building MI-WAY, our own fleet management platform. Our goal: full Namibia coverage.
               </p>
             </div>
           </div>
 
-          {/* Right — Key facts */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-malu-white border border-malu-sand p-6">
-              <span className="font-[var(--font-outfit)] text-4xl sm:text-5xl font-extrabold text-malu-gold/25 leading-none">
-                &apos;17
-              </span>
-              <h3 className="font-[var(--font-outfit)] text-base font-bold text-malu-navy mt-2 mb-1">Established</h3>
-              <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-xs leading-relaxed">
-                Registered CC since 2017
-              </p>
+          {/* Right — Okahandja photo + key facts */}
+          <div>
+            {/* Photo */}
+            <div className="relative overflow-hidden mb-5">
+              <Image
+                src="https://sfile.chatglm.cn/images-ppt/266de076233b.jpg"
+                alt="Okahandja, Namibia — aerial view"
+                width={600}
+                height={440}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-malu-navy/70 to-transparent p-4">
+                <span className="text-white/80 font-[var(--font-plus-jakarta)] text-xs tracking-[0.12em] uppercase">
+                  Okahandja, Otjozondjupa Region
+                </span>
+              </div>
             </div>
 
-            <div className="bg-malu-white border border-malu-sand p-6">
-              <div className="w-10 h-10 border border-malu-gold/30 flex items-center justify-center text-malu-gold mb-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
-                </svg>
+            {/* Key facts */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-white border border-malu-border p-5">
+                <span className="font-[var(--font-outfit)] text-3xl font-extrabold text-malu-gold/25 leading-none">
+                  &apos;17
+                </span>
+                <h3 className="font-[var(--font-outfit)] text-sm font-bold text-malu-navy mt-2 mb-0.5">Established</h3>
+                <p className="text-malu-text-muted/60 font-[var(--font-plus-jakarta)] text-xs">Registered CC since 2017</p>
               </div>
-              <h3 className="font-[var(--font-outfit)] text-base font-bold text-malu-navy mb-1">Okahandja</h3>
-              <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-xs leading-relaxed">
-                Founded. Based. Expanding nationally.
-              </p>
-            </div>
-
-            <div className="bg-malu-white border border-malu-sand p-6">
-              <div className="w-10 h-10 border border-malu-gold/30 flex items-center justify-center text-malu-gold mb-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
-                </svg>
+              <div className="bg-white border border-malu-border p-5">
+                <h3 className="font-[var(--font-outfit)] text-sm font-bold text-malu-navy mb-0.5">5 Service Lines</h3>
+                <p className="text-malu-text-muted/60 font-[var(--font-plus-jakarta)] text-xs">Transport, Construction, Logistics, Cleaning, Software</p>
               </div>
-              <h3 className="font-[var(--font-outfit)] text-base font-bold text-malu-navy mb-1">5 Service Lines</h3>
-              <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-xs leading-relaxed">
-                Transport, Construction, Logistics, Cleaning, Software
-              </p>
-            </div>
-
-            <div className="bg-malu-gold/[0.06] border border-malu-gold/25 p-6">
-              <div className="w-10 h-10 bg-malu-gold/10 border border-malu-gold/30 flex items-center justify-center text-malu-gold mb-3">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
+              <div className="bg-malu-gold/[0.06] border border-malu-gold/20 p-5 col-span-2">
+                <h3 className="font-[var(--font-outfit)] text-sm font-bold text-malu-navy mb-0.5">One Number for Everything</h3>
+                <p className="text-malu-gold font-[var(--font-outfit)] text-lg font-bold">+264 81 127 7308</p>
               </div>
-              <h3 className="font-[var(--font-outfit)] text-base font-bold text-malu-navy mb-1">MI-WAY</h3>
-              <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-xs leading-relaxed">
-                Our fleet management platform
-              </p>
             </div>
           </div>
         </div>

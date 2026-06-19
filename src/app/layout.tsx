@@ -44,12 +44,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NA",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Malu Investment CC — Moving Namibia Forward",
-    description:
-      "Okahandja-founded, operating nationally. Transport, construction, logistics, cleaning — and MI-WAY fleet management.",
-  },
 };
 
 export default function RootLayout({
@@ -60,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.variable} ${plusJakarta.variable} antialiased bg-malu-cream text-malu-navy`}
+        className={`${outfit.variable} ${plusJakarta.variable} antialiased bg-white text-malu-navy`}
       >
         {children}
       </body>
