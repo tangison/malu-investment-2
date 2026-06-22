@@ -3,91 +3,94 @@ import Image from "next/image";
 const services = [
   {
     title: "Taxi Transport",
-    description: "Reliable point-to-point rides across Okahandja and surrounding areas. Day or night — we show up.",
+    description: "Reliable point-to-point rides across Oshakati, Ongwediva, and Ondangwa. Day or night — we show up. MI-WAY dispatched.",
     status: "Active" as const,
-    image: "https://sfile.chatglm.cn/images-ppt/7460586637f0.jpeg",
+    unit: "UNIT/T-01",
+    image: "/assets/brand/brand-asset-04.webp",
   },
   {
     title: "Construction & Renovation",
-    description: "Residential and commercial building projects. Quality work, honest timelines.",
+    description: "Residential and commercial building projects across northern Namibia. Quality work, honest timelines.",
     status: "Coming Soon" as const,
-    image: "https://sfile.chatglm.cn/images-ppt/96d044b023b9.jpg",
+    unit: "UNIT/C-02",
+    image: "/assets/brand/brand-asset-07.webp",
   },
   {
     title: "Logistics & Import/Export",
-    description: "Goods movement across Namibia and borders. Supply chain support that keeps your business moving.",
+    description: "Goods movement across Namibia and borders. Supply chain support that keeps your business moving forward.",
     status: "Coming Soon" as const,
-    image: "https://sfile.chatglm.cn/images-ppt/ce22f2ddd21a.jpg",
+    unit: "UNIT/L-03",
+    image: "/assets/brand/brand-asset-08.webp",
   },
   {
     title: "Cleaning & Carwash",
-    description: "Professional cleaning for homes, offices, and vehicles. Every space spotless.",
+    description: "Professional cleaning for homes, offices, and vehicles. Every space spotless. Northern Namibia coverage.",
     status: "Coming Soon" as const,
-    image: "https://sfile.chatglm.cn/images-ppt/cac5ce59d116.jpg",
+    unit: "UNIT/CL-04",
+    image: "/assets/brand/brand-asset-09.webp",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="relative bg-malu-white py-20 sm:py-28">
+    <section id="services" className="relative bg-malu-substrate border-b border-malu-grid">
+      {/* Section header — Industrial grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-14">
-          <span className="text-malu-gold font-[var(--font-outfit)] text-[11px] uppercase tracking-[0.3em] font-medium">
-            What We Do
-          </span>
-          <h2 className="font-[var(--font-outfit)] text-3xl sm:text-4xl md:text-5xl font-extrabold text-malu-navy tracking-tight mt-3">
-            Our Services
-          </h2>
-          <div className="w-12 h-0.5 bg-malu-gold mt-4" />
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-0 py-12 sm:py-16 border-b border-malu-grid">
+          <div className="sm:col-span-4">
+            <span className="font-[family-name:var(--font-jetbrains-mono)] text-[10px] tracking-[0.15em] text-malu-silver-dark uppercase block">
+              [ Services ]
+            </span>
+            <h2 className="macro-type text-malu-navy mt-2" style={{ fontSize: "clamp(2rem, 5vw, 4.5rem)" }}>
+              WHAT<br />WE DO
+            </h2>
+          </div>
+          <div className="sm:col-span-8 flex items-end">
+            <p className="font-[family-name:var(--font-inter)] text-sm text-malu-navy/60 leading-relaxed max-w-lg sm:pb-2">
+              Four service verticals. One operational standard. From taxi dispatch on Oshakati&apos;s roads to logistics corridors connecting Namibia — every division runs on the same commitment to reliability and accountability.
+            </p>
+          </div>
         </div>
 
-        {/* Service cards with images */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+        {/* Service cards — Grid compartments */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 bg-malu-grid-dark" style={{ gap: "1px" }}>
           {services.map((service) => (
             <div
               key={service.title}
-              className={`group relative overflow-hidden bg-white transition-all duration-400 hover:-translate-y-0.5 ${
-                service.status === "Active"
-                  ? "border-2 border-malu-gold/25 hover:border-malu-gold/50"
-                  : "border border-malu-border hover:border-malu-gold/30"
-              }`}
+              className="group bg-malu-substrate hover:bg-white transition-colors duration-200"
             >
               {/* Image */}
-              <div className="relative h-48 sm:h-52 overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden border-b border-malu-grid halftone">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transition-transform duration-600 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-
-                {/* Status badge */}
-                <span
-                  className={`absolute top-3 right-3 font-[var(--font-outfit)] text-[10px] uppercase tracking-[0.18em] font-semibold px-2.5 py-1 z-10 ${
-                    service.status === "Active"
-                      ? "text-white bg-malu-gold/90"
-                      : "text-malu-text-muted/60 bg-white/90 border border-malu-border"
-                  }`}
-                >
-                  {service.status}
-                </span>
+                {/* Unit ID overlay */}
+                <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-3 py-2 bg-malu-navy/80">
+                  <span className="font-[family-name:var(--font-jetbrains-mono)] text-[9px] tracking-[0.12em] text-malu-silver uppercase">
+                    {service.unit}
+                  </span>
+                  <span
+                    className={`font-[family-name:var(--font-jetbrains-mono)] text-[9px] tracking-[0.1em] uppercase font-bold ${
+                      service.status === "Active"
+                        ? "text-malu-gold"
+                        : "text-malu-silver-dark"
+                    }`}
+                  >
+                    {service.status === "Active" ? ">>>" : "..."} {service.status}
+                  </span>
+                </div>
               </div>
 
               {/* Content */}
               <div className="p-5 sm:p-6">
-                <h3
-                  className={`font-[var(--font-outfit)] text-lg sm:text-xl font-bold tracking-tight mb-2 ${
-                    service.status === "Active"
-                      ? "text-malu-navy"
-                      : "text-malu-navy group-hover:text-malu-gold"
-                  } transition-colors duration-300`}
-                >
+                <h3 className="font-[family-name:var(--font-inter)] text-base sm:text-lg font-black tracking-[-0.02em] text-malu-navy uppercase leading-tight mb-2">
                   {service.title}
                 </h3>
-                <p className="text-malu-text-muted font-[var(--font-plus-jakarta)] text-sm leading-relaxed">
+                <p className="font-[family-name:var(--font-inter)] text-sm text-malu-navy/50 leading-relaxed">
                   {service.description}
                 </p>
               </div>

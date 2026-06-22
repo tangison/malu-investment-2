@@ -56,3 +56,27 @@ Stage Summary:
 - Live at: https://malu-investment-2.vercel.app
 - GitHub: https://github.com/tangison/malu-investment-2
 - Asset budget: 300KB (under 500KB limit)
+
+---
+Task ID: 4
+Agent: Main Agent (Super Z)
+Task: v4 Industrial Brutalist redesign — Swiss Industrial Print archetype
+
+Work Log:
+- Unzipped upload/Screenshot_20260619-180938-removebg-prev.zip (16 images)
+- Analyzed all 16 images via VLM (z-ai vision SDK)
+- Converted all 16 images to WebP (brand-asset-01 through brand-asset-16)
+- Rebuilt globals.css with Swiss Industrial Print color system (navy + silver + minimal gold on #F4F4F0 substrate)
+- Rebuilt layout.tsx with Inter (macro) + JetBrains Mono (micro) typography
+- Rebuilt all 7 components: Navbar, Hero, Services, MiWay, About, CTABanner, Footer
+- Applied industrial-brutalist-ui skill: 90° corners, ASCII framing, warning stripes, halftone overlays, scanlines, mechanical noise
+- Updated all locations: Okahandja → Oshakati/Ongwediva/Ondangwa
+- Removed CC/2017/00248 everywhere (layout metadata, Hero trust line, About text, Footer)
+- Placed all real brand assets (MI-WAY fleet photos from Oshakati, logos, shields)
+- Built successfully, pushed to GitHub, deployed to Vercel
+
+Stage Summary:
+- Live at https://malu-investment-2.vercel.app/
+- 16 brand assets placed: real MI-WAY vehicles in Oshakati/Ongwediva
+- All verifications pass: no Okahandja, no CC/2017, new typography, industrial brutalism
+- Deployment state: READY
