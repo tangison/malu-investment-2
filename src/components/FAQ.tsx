@@ -41,6 +41,8 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
                 className="w-full flex items-center justify-between py-5 text-left group"
               >
                 <span className="font-[family-name:var(--font-space-grotesk)] text-sm sm:text-base text-text-primary group-hover:text-amber transition-colors pr-4">
@@ -54,6 +56,9 @@ export default function FAQ() {
                 initial={false}
                 animate={{ height: openIndex === i ? "auto" : 0, opacity: openIndex === i ? 1 : 0 }}
                 transition={{ duration: 0.2 }}
+                id={`faq-answer-${i}`}
+                role="region"
+                aria-labelledby={`faq-q-${i}`}
                 className="overflow-hidden"
               >
                 <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary leading-relaxed pb-5">

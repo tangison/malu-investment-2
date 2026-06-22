@@ -1,9 +1,19 @@
+import Image from 'next/image';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
-export const metadata = { title: "About — MI-WAY by Malu Investment" };
+export const metadata = {
+  title: "About",
+  description: "Malu Investment was founded in 2017 in Oshakati, Northern Namibia. From one taxi to a multi-service enterprise covering Oshakati, Ongwediva, and Ondangwa.",
+  openGraph: {
+    title: "About Malu Investment — MI-WAY",
+    description: "Our story: from one taxi in Oshakati to a multi-service enterprise across Northern Namibia.",
+    type: "website",
+  },
+  alternates: { canonical: "https://malu-investment-2.vercel.app/about" },
+};
 
 export default function AboutPage() {
   return (
@@ -38,7 +48,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="relative aspect-[16/10] overflow-hidden border border-base-border mb-8">
-                <img src="/assets/brand/brand-asset-13.webp" alt="MI-WAY vehicle" className="w-full h-full object-cover" />
+                <Image src="/assets/brand/brand-asset-13.webp" alt="MI-WAY vehicle on northern Namibian road" width={600} height={440} className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-base/80 px-4 py-3 flex items-center justify-between">
                   <span className="font-mono text-[9px] tracking-[0.12em] text-text-muted uppercase">MI-WAY UNIT 02 /// ONGWEDIVA</span>
                   <span className="font-mono text-[9px] tracking-[0.12em] text-amber uppercase">N 47989 SH</span>

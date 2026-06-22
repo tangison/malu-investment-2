@@ -4,7 +4,16 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
-export const metadata = { title: "Blog — MI-WAY by Malu Investment" };
+export const metadata = {
+  title: "Blog",
+  description: "Guides, stories, and insights from Northern Namibia. Practical info for Malu Investment riders and behind-the-scenes looks at MI-WAY.",
+  openGraph: {
+    title: "Blog — MI-WAY by Malu Investment",
+    description: "Insights from Northern Namibia: taxi guides, tech stories, and business tips.",
+    type: "website",
+  },
+  alternates: { canonical: "https://malu-investment-2.vercel.app/blog" },
+};
 
 const articles = [
   {

@@ -78,7 +78,7 @@
   }
 }
 
-html { scroll-behavior: smooth; }
+/* scroll-behavior removed — Lenis handles smooth scrolling */
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0D0D0D; }

@@ -18,26 +18,18 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "MI-WAY by Malu Investment — Moving Namibia Forward",
+  title: {
+    default: "MI-WAY by Malu Investment — Moving Namibia Forward",
+    template: "%s | MI-WAY by Malu Investment",
+  },
   description:
     "Northern Namibia multi-service enterprise. Taxi transport across Oshakati, Ongwediva, Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
-  keywords: [
-    "Malu Investment",
-    "MI-WAY",
-    "Oshakati",
-    "Ongwediva",
-    "Ondangwa",
-    "Northern Namibia",
-    "taxi",
-    "transport",
-    "fleet management",
-    "construction",
-    "logistics",
-    "cleaning",
-  ],
   authors: [{ name: "Malu Investment" }],
   icons: {
-    icon: "/assets/brand/brand-asset-01.webp",
+    icon: [
+      { url: "/assets/brand/brand-asset-01.webp", sizes: "32x32" },
+    ],
+    apple: "/assets/brand/brand-asset-01.webp",
   },
   openGraph: {
     title: "MI-WAY by Malu Investment — Moving Namibia Forward",
@@ -45,6 +37,10 @@ export const metadata: Metadata = {
       "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
     type: "website",
     locale: "en_NA",
+    siteName: "MI-WAY by Malu Investment",
+  },
+  alternates: {
+    canonical: "https://malu-investment-2.vercel.app",
   },
 };
 
@@ -54,11 +50,48 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased grain-overlay`}
       >
-        <LenisProvider>{children}</LenisProvider>
+        <LenisProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amber focus:text-base focus:px-4 focus:py-2 focus:font-sans focus:text-sm focus:font-bold focus:uppercase"
+          >
+            Skip to content
+          </a>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Malu Investment",
+                url: "https://malu-investment-2.vercel.app",
+                description: "Northern Namibia multi-service enterprise. Taxi transport, construction, logistics, cleaning, and MI-WAY fleet management.",
+                foundingDate: "2017",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Oshakati",
+                  addressRegion: "Oshana",
+                  addressCountry: "NA",
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  telephone: "+264-81-211-1920",
+                  contactType: "customer service",
+                  availableLanguage: "English",
+                },
+                sameAs: [
+                  "https://www.facebook.com/share/p/1HoFSQW4o2/",
+                  "https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc",
+                ],
+              }),
+            }}
+          />
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let lenis: any;
-    let raf: number;
+    let tickerCallback: ((time: number) => void) | null = null;
 
     const init = async () => {
       const Lenis = (await import("lenis")).default;
@@ -22,9 +22,11 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
 
       lenis.on("scroll", ScrollTrigger.update);
 
-      gsap.ticker.add((time: number) => {
+      tickerCallback = (time: number) => {
         lenis.raf(time * 1000);
-      });
+      };
+
+      gsap.ticker.add(tickerCallback);
       gsap.ticker.lagSmoothing(0);
     };
 
@@ -34,6 +36,11 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
     }
 
     return () => {
+      // Clean up GSAP ticker
+      if (tickerCallback) {
+        const gsapModule = require("gsap");
+        gsapModule.gsap.ticker.remove(tickerCallback);
+      }
       if (lenis) lenis.destroy();
     };
   }, []);

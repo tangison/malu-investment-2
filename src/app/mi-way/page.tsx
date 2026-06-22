@@ -1,9 +1,19 @@
+import Image from 'next/image';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
-export const metadata = { title: "MI-WAY Fleet Management — Malu Investment" };
+export const metadata = {
+  title: "MI-WAY Fleet Management",
+  description: "MI-WAY is Malu Investment's in-house taxi fleet dispatch and management platform. Real-time dispatch, GPS tracking, and fleet analytics for Northern Namibia.",
+  openGraph: {
+    title: "MI-WAY Fleet Management — Malu Investment",
+    description: "Namibia's first local fleet management platform. Dispatch, track, manage.",
+    type: "website",
+  },
+  alternates: { canonical: "https://malu-investment-2.vercel.app/mi-way" },
+};
 
 export default function MiWayPage() {
   return (
@@ -47,7 +57,7 @@ export default function MiWayPage() {
             </div>
             <div className="space-y-6">
               <div className="bg-navy border border-amber/10 p-8 flex items-center justify-center scanlines">
-                <img src="/assets/brand/brand-asset-03.webp" alt="MI-WAY Shield" className="shield-pulse w-40 h-auto" />
+                <Image src="/assets/brand/brand-asset-03.webp" alt="MI-WAY Shield" width={160} height={211} className="shield-pulse w-40 h-auto" />
               </div>
               <div className="bg-base-card border border-base-border p-4">
                 <div className="font-mono text-[10px] tracking-[0.12em] text-amber/50 uppercase space-y-1">
@@ -59,7 +69,7 @@ export default function MiWayPage() {
                 </div>
               </div>
               <div className="relative aspect-[16/10] overflow-hidden border border-base-border">
-                <img src="/assets/brand/brand-asset-15-crop-bottom.webp" alt="MI-WAY fleet vehicles" className="w-full h-full object-cover opacity-70" />
+                <Image src="/assets/brand/brand-asset-15-crop-bottom.webp" alt="MI-WAY fleet vehicles" width={768} height={499} className="w-full h-full object-cover opacity-70" />
                 <div className="absolute bottom-0 left-0 right-0 bg-base/80 px-4 py-3">
                   <span className="font-mono text-[8px] tracking-[0.12em] text-text-muted uppercase">MI-WAY FLEET /// OSHAKATI COMMERCIAL HUB</span>
                 </div>

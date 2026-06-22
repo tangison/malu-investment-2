@@ -4,7 +4,16 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 import FAQ from "@/components/FAQ";
 
-export const metadata = { title: "Contact — MI-WAY by Malu Investment" };
+export const metadata = {
+  title: "Contact",
+  description: "Book a taxi ride via WhatsApp at +264 81 211 1920. Operating across Oshakati, Ongwediva, and Ondangwa, Northern Namibia. 24/7 availability.",
+  openGraph: {
+    title: "Contact — MI-WAY by Malu Investment",
+    description: "Book a ride or get in touch. WhatsApp: +264 81 211 1920.",
+    type: "website",
+  },
+  alternates: { canonical: "https://malu-investment-2.vercel.app/contact" },
+};
 
 export default function ContactPage() {
   return (
