@@ -3,76 +3,76 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* ── Swiss Industrial Print — Light Mode Substrate ── */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-space-grotesk);
+  --font-display: var(--font-bebas-neue);
 
-  /* ── Industrial Brutalist Color System ── */
-  --color-malu-navy: #15233F;
-  --color-malu-navy-deep: #0D1629;
-  --color-malu-navy-light: #1E3358;
-  --color-malu-silver: #C0C8D4;
-  --color-malu-silver-light: #E2E8F0;
-  --color-malu-silver-dark: #8A94A6;
-  --color-malu-gold: #A9802D;
-  --color-malu-gold-muted: #BFA04E;
-  --color-malu-substrate: #F4F4F0;
-  --color-malu-substrate-warm: #EAE8E3;
-  --color-malu-ink: #050505;
-  --color-malu-ink-light: #1A1A1A;
-  --color-malu-grid: #D4D0C8;
-  --color-malu-grid-dark: #15233F;
+  /* ── Dark Mode Color System ── */
+  --color-base: #0D0D0D;
+  --color-base-elevated: #161616;
+  --color-base-card: #1A1A1A;
+  --color-base-border: #2A2A2A;
+  --color-amber: #F5A623;
+  --color-amber-light: #FFBF4C;
+  --color-amber-dark: #D4891A;
+  --color-amber-muted: rgba(245,166,35,0.12);
+  --color-amber-glow: rgba(245,166,35,0.25);
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #999999;
+  --color-text-muted: #666666;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-glow: rgba(37,211,102,0.4);
+  --color-navy: #15233F;
+  --color-navy-light: #1E3358;
 
-  /* ── Semantic Mappings ── */
-  --color-primary: #15233F;
-  --color-primary-foreground: #F4F4F0;
-  --color-secondary: #E2E8F0;
-  --color-secondary-foreground: #15233F;
-  --color-muted: #F4F4F0;
-  --color-muted-foreground: #8A94A6;
-  --color-accent: #A9802D;
-  --color-accent-foreground: #F4F4F0;
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: #C0C8D4;
-  --color-input: #C0C8D4;
-  --color-ring: #15233F;
-  --color-card: #F4F4F0;
-  --color-card-foreground: #15233F;
-  --color-popover: #F4F4F0;
-  --color-popover-foreground: #15233F;
+  /* Semantic */
+  --color-primary: #F5A623;
+  --color-primary-foreground: #0D0D0D;
+  --color-secondary: #1A1A1A;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #161616;
+  --color-muted-foreground: #999999;
+  --color-accent: #F5A623;
+  --color-accent-foreground: #0D0D0D;
+  --color-destructive: #E61919;
+  --color-border: #2A2A2A;
+  --color-input: #2A2A2A;
+  --color-ring: #F5A623;
+  --color-card: #1A1A1A;
+  --color-card-foreground: #FFFFFF;
+  --color-popover: #1A1A1A;
+  --color-popover-foreground: #FFFFFF;
 }
 
 :root {
-  --background: #F4F4F0;
-  --foreground: #15233F;
-  --card: #F4F4F0;
-  --card-foreground: #15233F;
-  --popover: #F4F4F0;
-  --popover-foreground: #15233F;
-  --primary: #15233F;
-  --primary-foreground: #F4F4F0;
-  --secondary: #E2E8F0;
-  --secondary-foreground: #15233F;
-  --muted: #F4F4F0;
-  --muted-foreground: #8A94A6;
-  --accent: #A9802D;
-  --accent-foreground: #F4F4F0;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #C0C8D4;
-  --input: #C0C8D4;
-  --ring: #15233F;
+  --background: #0D0D0D;
+  --foreground: #FFFFFF;
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --primary: #F5A623;
+  --primary-foreground: #0D0D0D;
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFFFFF;
+  --muted: #161616;
+  --muted-foreground: #999999;
+  --accent: #F5A623;
+  --accent-foreground: #0D0D0D;
+  --destructive: #E61919;
+  --border: #2A2A2A;
+  --input: #2A2A2A;
+  --ring: #F5A623;
   --radius: 0px;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    border-radius: 0 !important;
   }
   body {
-    @apply bg-malu-substrate text-malu-navy;
+    @apply bg-base text-text-primary;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -80,26 +80,91 @@
 
 html { scroll-behavior: smooth; }
 
-/* ── Scrollbar — Industrial ── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #F4F4F0; }
-::-webkit-scrollbar-thumb { background: #15233F; }
-::-webkit-scrollbar-thumb:hover { background: #1E3358; }
+::-webkit-scrollbar-track { background: #0D0D0D; }
+::-webkit-scrollbar-thumb { background: #F5A623; }
+::-webkit-scrollbar-thumb:hover { background: #FFBF4C; }
 
-/* ── Mechanical Noise Overlay ── */
-.mechanical-noise::before {
+/* ── Grain Texture Overlay ── */
+.grain-overlay::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
-  background-size: 256px 256px;
+  background-size: 200px 200px;
 }
 
-/* ── CRT Scanlines (for MI-WAY section) ── */
+/* ── Display Font ── */
+.font-display {
+  font-family: var(--font-bebas-neue), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── WhatsApp Float Pulse ── */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    transform: scale(1.05);
+  }
+}
+.whatsapp-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ── Shield Pulse ── */
+@keyframes shield-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(245,166,35,0)); }
+  50% { transform: scale(1.03); filter: drop-shadow(0 0 20px rgba(245,166,35,0.3)); }
+}
+.shield-pulse {
+  animation: shield-pulse 3s ease-in-out infinite;
+}
+
+/* ── Ticker ── */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 25s linear infinite;
+}
+@media (max-width: 768px) {
+  .animate-ticker { animation-duration: 15s; }
+}
+
+/* ── Counter blink ── */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.blink { animation: blink 1s step-end infinite; }
+
+/* ── Scroll snap for mobile services ── */
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-start { scroll-snap-align: start; }
+
+/* ── Accessibility ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-ticker { animation: none !important; }
+}
+
+/* ── Scanlines ── */
 .scanlines::after {
   content: "";
   position: absolute;
@@ -109,108 +174,8 @@ html { scroll-behavior: smooth; }
     0deg,
     transparent,
     transparent 2px,
-    rgba(21,35,63,0.03) 2px,
-    rgba(21,35,63,0.03) 4px
+    rgba(245,166,35,0.015) 2px,
+    rgba(245,166,35,0.015) 4px
   );
   z-index: 2;
 }
-
-/* ── Halftone Dithering on Images ── */
-.halftone {
-  position: relative;
-}
-.halftone::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #15233F 0.5px, transparent 0.5px);
-  background-size: 4px 4px;
-  mix-blend-mode: multiply;
-  opacity: 0.08;
-  z-index: 1;
-}
-
-/* ── Macro Typography — Swiss Industrial ── */
-.macro-type {
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-  line-height: 0.88;
-}
-
-/* ── Micro Typography — Telemetry ── */
-.micro-type {
-  font-family: var(--font-jetbrains-mono), monospace;
-  font-size: 0.6875rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  line-height: 1.4;
-}
-
-/* ── Grid Compartment System ── */
-.compartment {
-  border: 1px solid #C0C8D4;
-}
-
-.compartment-dark {
-  border: 1px solid rgba(192,200,212,0.15);
-}
-
-/* ── ASCII Frame ── */
-.ascii-frame::before {
-  content: "[ ";
-  color: #C0C8D4;
-}
-.ascii-frame::after {
-  content: " ]";
-  color: #C0C8D4;
-}
-
-/* ── Warning Stripe ── */
-.warning-stripe {
-  background: repeating-linear-gradient(
-    -45deg,
-    #15233F,
-    #15233F 8px,
-    #A9802D 8px,
-    #A9802D 16px
-  );
-  height: 4px;
-}
-
-/* ── Grid Divider ── */
-.grid-divider {
-  height: 1px;
-  background: #C0C8D4;
-}
-
-.grid-divider-dark {
-  height: 1px;
-  background: rgba(192,200,212,0.15);
-}
-
-/* ── Animations — Industrial ── */
-@keyframes blink-cursor {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-.blink-cursor::after {
-  content: "_";
-  animation: blink-cursor 1.2s step-end infinite;
-  color: #A9802D;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.animate-ticker {
-  animation: ticker 30s linear infinite;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }

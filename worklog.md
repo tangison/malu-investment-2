@@ -80,3 +80,33 @@ Stage Summary:
 - 16 brand assets placed: real MI-WAY vehicles in Oshakati/Ongwediva
 - All verifications pass: no Okahandja, no CC/2017, new typography, industrial brutalism
 - Deployment state: READY
+
+---
+Task ID: 5
+Agent: Main Agent (Super Z)
+Task: v5 Complete mobile-first redesign — Dark mode, multi-page, Mia chatbot
+
+Work Log:
+- Installed gsap, framer-motion, lenis, @gsap/react
+- Rebuilt globals.css: dark mode (#0D0D0D base + #F5A623 amber accent + white text)
+- Rebuilt layout.tsx: Bebas Neue (display) + Space Grotesk (body) + LenisProvider
+- Created LenisProvider for smooth scroll physics
+- Cropped 4 portrait images to landscape sections (brand-asset-03, 15, mi-way-shield, shield-banner)
+- Rebuilt all components: Navbar, Hero, Services, MiWay, About, CTABanner, Footer
+- New components: FloatingWhatsApp (pulsing green), MiaChatbot (bottom-left), Testimonials, FAQ
+- Created API route /api/chat for Mia chatbot (rule-based responses)
+- Created multi-page routes: /services, /mi-way, /about, /blog, /blog/[slug], /contact
+- Blog: 3 starter articles with full content (~6 paragraphs each)
+- Updated WhatsApp number: +264 81 211 1920 (replaced +264 81 127 7308)
+- Added WhatsApp Community link: chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc
+- Added Facebook link: facebook.com/share/p/1HoFSQW4o2/
+- Service-specific WhatsApp pre-filled messages for all 4 services
+- Framer Motion animations: entrance, clip-path reveals, stagger, spring transitions
+- Mobile-first: horizontal snap scroll services, parallax hero, responsive nav
+- Deployed to Vercel: malu-investment-2.vercel.app
+
+Stage Summary:
+- Live deployment at https://malu-investment-2-kwhngfoy1-targis47s-projects.vercel.app/
+- All 7 routes returning 200 OK
+- All content verifications pass: new WhatsApp, Oshakati/Ongwediva/Ondangwa, no Okahandja, no CC/2017
+- Mia chatbot, floating WhatsApp, testimonials, FAQ all functional

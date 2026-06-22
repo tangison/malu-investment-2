@@ -1,35 +1,36 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import LenisProvider from "@/providers/LenisProvider";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: "400",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "MALU INVESTMENT — Moving Namibia Forward",
+  title: "MI-WAY by Malu Investment — Moving Namibia Forward",
   description:
-    "Northern Namibia multi-service enterprise. Transport, construction, logistics, cleaning — and MI-WAY fleet management. Operating across Oshakati, Ongwediva, and Ondangwa.",
+    "Northern Namibia multi-service enterprise. Taxi transport across Oshakati, Ongwediva, Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
   keywords: [
     "Malu Investment",
+    "MI-WAY",
     "Oshakati",
     "Ongwediva",
     "Ondangwa",
     "Northern Namibia",
-    "MI-WAY",
-    "fleet management",
     "taxi",
     "transport",
+    "fleet management",
     "construction",
     "logistics",
     "cleaning",
@@ -39,9 +40,9 @@ export const metadata: Metadata = {
     icon: "/assets/brand/brand-asset-01.webp",
   },
   openGraph: {
-    title: "MALU INVESTMENT — Moving Namibia Forward",
+    title: "MI-WAY by Malu Investment — Moving Namibia Forward",
     description:
-      "Operating across Oshakati, Ongwediva, and Ondangwa. Transport, construction, logistics, cleaning — and MI-WAY fleet management.",
+      "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
     type: "website",
     locale: "en_NA",
   },
@@ -55,9 +56,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased mechanical-noise`}
+        className={`${bebasNeue.variable} ${spaceGrotesk.variable} antialiased grain-overlay`}
       >
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );

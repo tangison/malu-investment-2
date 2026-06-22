@@ -1,113 +1,138 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function MiWay() {
-  return (
-    <section id="miway" className="relative bg-malu-navy overflow-hidden scanlines">
-      {/* Top divider */}
-      <div className="warning-stripe" />
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-start">
-          {/* Left — Shield emblem compartment */}
-          <div className="lg:col-span-4 flex flex-col items-center lg:items-start py-8 lg:py-0 lg:pr-12 border-b lg:border-b-0 lg:border-r border-malu-silver/15">
-            <span className="font-[family-name:var(--font-jetbrains-mono)] text-[9px] tracking-[0.15em] text-malu-silver/40 uppercase mb-4">
-              &lt; Fleet System /&gt;
-            </span>
-            <div className="relative w-44 sm:w-52">
+  return (
+    <section id="miway" ref={sectionRef} className="relative bg-navy overflow-hidden scanlines border-y border-amber/10">
+      {/* Glow */}
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber/[0.03] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left — Shield + terminal */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-start">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={isInView ? { scale: 1, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative"
+            >
               <Image
                 src="/assets/brand/brand-asset-03.webp"
                 alt="MI-WAY shield emblem"
-                width={220}
-                height={290}
-                className="w-full h-auto"
+                width={200}
+                height={264}
+                className="shield-pulse w-40 sm:w-52 h-auto"
                 priority
               />
-            </div>
-            <div className="mt-4 flex items-center gap-2">
-              <div className="w-1.5 h-1.5 bg-malu-gold" />
-              <span className="font-[family-name:var(--font-jetbrains-mono)] text-[9px] tracking-[0.15em] text-malu-silver/40 uppercase blink-cursor">
-                In Development
-              </span>
-            </div>
+            </motion.div>
+
+            {/* Terminal readout */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.4 }}
+              className="mt-6 bg-base/50 border border-amber/10 p-4 w-full max-w-xs"
+            >
+              <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.12em] text-amber/50 uppercase space-y-1">
+                <p>&gt; SYSTEM: MI-WAY v2.6</p>
+                <p>&gt; STATUS: <span className="text-whatsapp">In Development</span><span className="blink">_</span></p>
+                <p>&gt; DEPLOY: Northern Namibia</p>
+                <p>&gt; UNITS: 02 Active</p>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Right — Copy + Fleet image */}
-          <div className="lg:col-span-8 lg:pl-12 pt-8 lg:pt-0">
-            {/* Micro label */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px bg-malu-silver/20" />
-              <span className="font-[family-name:var(--font-jetbrains-mono)] text-[9px] tracking-[0.15em] text-malu-silver/40 uppercase">
-                [ Dispatch Platform ]
+          {/* Right — Copy + fleet image */}
+          <div className="lg:col-span-7">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-3 mb-5"
+            >
+              <div className="w-8 h-px bg-amber/30" />
+              <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-text-secondary/50 uppercase">
+                Fleet Management Platform
               </span>
-            </div>
+            </motion.div>
 
-            {/* Massive MI-WAY header */}
-            <h2 className="macro-type text-malu-silver-light" style={{ fontSize: "clamp(3rem, 8vw, 9rem)" }}>
+            <motion.h2
+              initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
+              animate={isInView ? { clipPath: "inset(0% 0 0 0)", y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+              className="font-display text-[clamp(3rem,8vw,8rem)] text-text-primary leading-[0.9] mb-2"
+            >
               MI-WAY
-            </h2>
-            <p className="font-[family-name:var(--font-jetbrains-mono)] text-[10px] tracking-[0.2em] text-malu-silver-dark uppercase mt-1 mb-8">
-              by Malu Investment /// Fleet Management System
-            </p>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.5 }}
+              className="font-[family-name:var(--font-space-grotesk)] text-sm tracking-[0.2em] text-amber/60 uppercase mb-8"
+            >
+              by Malu Investment /// Dispatch System
+            </motion.p>
 
-            {/* Description grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-t border-malu-silver/10 mb-8">
-              <div className="py-5 pr-6 border-b sm:border-b-0 sm:border-r border-malu-silver/10">
-                <span className="font-[family-name:var(--font-jetbrains-mono)] text-[8px] tracking-[0.12em] text-malu-silver/30 uppercase block mb-2">
-                  Function
-                </span>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-malu-silver/60 leading-relaxed">
-                  MI-WAY is a taxi fleet dispatch and management platform developed in-house. Born from real operational needs on Oshakati&apos;s roads — dispatch, tracking, management.
-                </p>
-              </div>
-              <div className="py-5 sm:pl-6 border-b border-malu-silver/10">
-                <span className="font-[family-name:var(--font-jetbrains-mono)] text-[8px] tracking-[0.12em] text-malu-silver/30 uppercase block mb-2">
-                  Philosophy
-                </span>
-                <p className="font-[family-name:var(--font-inter)] text-sm text-malu-silver/40 leading-relaxed">
-                  Built for operators who need reliability over features. No bloat. No vanity metrics. Dispatch. Track. Manage. That&apos;s the scope.
-                </p>
-              </div>
+            <div className="space-y-4 mb-8">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.6 }}
+                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/70 leading-relaxed"
+              >
+                MI-WAY is a taxi fleet dispatch and management platform developed in-house. Born from real operational needs on Oshakati&apos;s roads — dispatch, tracking, management. Built for operators who need reliability over features.
+              </motion.p>
             </div>
 
             {/* Fleet photo — Oshakati */}
-            <div className="relative overflow-hidden border border-malu-silver/10 halftone">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.7 }}
+              className="relative overflow-hidden border border-amber/10"
+            >
               <Image
-                src="/assets/brand/brand-asset-15.webp"
-                alt="MI-WAY fleet vehicles at Oshakati Commercial Hub"
+                src="/assets/brand/brand-asset-15-crop-top.webp"
+                alt="MI-WAY fleet at Oshakati Commercial Hub"
                 width={600}
-                height={400}
+                height={390}
                 className="w-full h-auto object-cover opacity-70"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-malu-navy via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-malu-navy/80">
-                <span className="font-[family-name:var(--font-jetbrains-mono)] text-[8px] tracking-[0.12em] text-malu-silver/50 uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-navy/80">
+                <span className="font-mono text-[8px] tracking-[0.12em] text-text-secondary/50 uppercase">
                   OSHAKATI COMMERCIAL HUB /// AUTHORIZED PARKING
                 </span>
-                <span className="font-[family-name:var(--font-jetbrains-mono)] text-[8px] tracking-[0.12em] text-malu-gold uppercase">
+                <span className="font-mono text-[8px] tracking-[0.12em] text-amber/60 uppercase">
                   REV 2.6
                 </span>
               </div>
-            </div>
+            </motion.div>
 
-            {/* MI-WAY shields reference */}
-            <div className="mt-4 flex items-center gap-4">
-              <Image
-                src="/assets/brand/brand-asset-12.webp"
-                alt="MI-WAY shield variants"
-                width={120}
-                height={60}
-                className="h-10 w-auto object-contain opacity-50"
-              />
-              <span className="font-[family-name:var(--font-jetbrains-mono)] text-[8px] tracking-[0.12em] text-malu-silver/30 uppercase">
-                UNIT/MI-SHIELD-001 /// VARIANT A + B
-              </span>
-            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.9 }}
+              className="mt-6"
+            >
+              <Link
+                href="/mi-way"
+                className="inline-flex items-center gap-2 border border-amber/30 text-amber font-[family-name:var(--font-space-grotesk)] text-[11px] tracking-[0.12em] uppercase font-bold px-6 py-3 hover:bg-amber hover:text-base transition-all duration-200"
+              >
+                Learn More About MI-WAY →
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
-
-      {/* Bottom divider */}
-      <div className="h-px bg-malu-silver/10" />
     </section>
   );
 }
