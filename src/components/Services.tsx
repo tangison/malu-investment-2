@@ -70,7 +70,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" ref={sectionRef} className="relative bg-base-elevated border-y border-base-border">
+    <section id="services" ref={sectionRef} className="relative bg-light border-y border-light-border">
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -87,7 +87,7 @@ export default function Services() {
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               animate={isInView ? { clipPath: "inset(0% 0 0 0)", y: 0 } : {}}
               transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-              className="font-display text-[clamp(2.5rem,6vw,5rem)] text-text-primary leading-[0.9]"
+              className="font-display text-[clamp(2.5rem,6vw,5rem)] text-light-text leading-[0.9]"
             >
               OUR SERVICES
             </motion.h2>
@@ -96,29 +96,29 @@ export default function Services() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.3 }}
-            className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary max-w-md leading-relaxed"
+            className="font-[family-name:var(--font-space-grotesk)] text-sm text-light-text-secondary max-w-md leading-relaxed"
           >
-            Four service verticals. One operational standard. From taxi dispatch on Oshakati&apos;s roads to logistics corridors connecting Namibia.
+            Four service lines, one standard: show up and deliver. From taxi dispatch on Oshakati&apos;s roads to logistics corridors connecting Namibia.
           </motion.p>
         </div>
 
         {/* Scroll indicators — mobile */}
         <div className="flex items-center justify-between mt-8 lg:hidden">
-          <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.15em] text-text-muted uppercase">
+          <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.15em] text-light-text-muted uppercase">
             Swipe to explore →
           </span>
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
               disabled={!canScrollLeft}
-              className="w-8 h-8 border border-base-border flex items-center justify-center text-text-muted hover:text-amber hover:border-amber/30 disabled:opacity-30 transition-colors"
+              className="w-8 h-8 border border-light-border flex items-center justify-center text-light-text-muted hover:text-amber hover:border-amber/30 disabled:opacity-30 transition-colors"
             >
               ←
             </button>
             <button
               onClick={() => scroll("right")}
               disabled={!canScrollRight}
-              className="w-8 h-8 border border-base-border flex items-center justify-center text-text-muted hover:text-amber hover:border-amber/30 disabled:opacity-30 transition-colors"
+              className="w-8 h-8 border border-light-border flex items-center justify-center text-light-text-muted hover:text-amber hover:border-amber/30 disabled:opacity-30 transition-colors"
             >
               →
             </button>
@@ -147,14 +147,14 @@ export default function Services() {
         </div>
 
         {/* Desktop grid */}
-        <div className="hidden lg:grid grid-cols-4 gap-0 max-w-7xl mx-auto border-t border-base-border">
+        <div className="hidden lg:grid grid-cols-4 gap-0 max-w-7xl mx-auto border-t border-light-border">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="border-r border-base-border last:border-r-0"
+              className="border-r border-light-border last:border-r-0"
             >
               <ServiceCard service={service} />
             </motion.div>
@@ -163,7 +163,7 @@ export default function Services() {
       </div>
 
       {/* See all link */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-6 border-t border-base-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-6 border-t border-light-border">
         <Link
           href="/services"
           className="inline-flex items-center gap-2 font-[family-name:var(--font-space-grotesk)] text-[11px] tracking-[0.12em] text-amber hover:text-amber-light uppercase transition-colors"
@@ -177,7 +177,7 @@ export default function Services() {
 
 function ServiceCard({ service }: { service: typeof services[0] }) {
   return (
-    <div className="group relative bg-base-card hover:bg-base-elevated transition-all duration-300 h-full">
+    <div className="group relative bg-white hover:bg-gray-50 transition-all duration-300 h-full border border-light-border">
       {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
@@ -187,13 +187,13 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 1024px) 85vw, 25vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-base-card via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />
         
         {/* Status badge */}
         <span className={`absolute top-3 right-3 font-[family-name:var(--font-space-grotesk)] text-[9px] tracking-[0.15em] uppercase font-bold px-3 py-1.5 ${
           service.status === "Active"
             ? "bg-amber text-base"
-            : "bg-base/80 text-text-muted border border-base-border"
+            : "bg-white/80 text-light-text-muted border border-light-border"
         }`}>
           {service.status}
         </span>
@@ -213,10 +213,10 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
 
       {/* Content */}
       <div className="p-5 sm:p-6">
-        <h3 className="font-display text-xl sm:text-2xl text-text-primary group-hover:text-amber transition-colors duration-200 mb-2">
+        <h3 className="font-display text-xl sm:text-2xl text-light-text group-hover:text-amber transition-colors duration-200 mb-2">
           {service.title}
         </h3>
-        <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary leading-relaxed line-clamp-3">
+        <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-light-text-secondary leading-relaxed line-clamp-3">
           {service.description}
         </p>
       </div>

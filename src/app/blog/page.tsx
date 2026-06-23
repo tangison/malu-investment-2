@@ -8,7 +8,7 @@ export const metadata = {
   title: "Blog",
   description: "Guides, stories, and insights from Northern Namibia. Practical info for Malu Investment riders and behind-the-scenes looks at MI-WAY.",
   openGraph: {
-    title: "Blog — MI-WAY by Malu Investment",
+    title: "Blog, MI-WAY by Malu Investment",
     description: "Insights from Northern Namibia: taxi guides, tech stories, and business tips.",
     type: "website",
   },
@@ -26,13 +26,13 @@ const articles = [
   {
     slug: "mi-way-building-namibia-fleet-app",
     title: "MI-WAY: How We're Building Namibia's First Local Fleet Management App",
-    excerpt: "From one taxi in Oshakati to a dispatch platform covering three cities — the story behind MI-WAY and why we're building it ourselves.",
+    excerpt: "From one taxi in Oshakati to a dispatch platform covering three cities. The story behind MI-WAY and why we're building it ourselves.",
     category: "Tech",
     date: "June 2026",
   },
   {
     slug: "northern-namibia-open-for-business",
-    title: "Northern Namibia is Open for Business — Here's What You Need to Know",
+    title: "Northern Namibia is Open for Business, Here's What You Need to Know",
     excerpt: "The north is growing fast. Here's why Oshakati, Ongwediva, and Ondangwa are becoming the next business frontier in Namibia.",
     category: "Insights",
     date: "June 2026",

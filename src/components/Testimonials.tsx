@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
 const testimonials = [
-  { name: "Ndapewa M.", location: "Oshakati", stars: 5, text: "Malu is always on time. I use them every morning to get to work. Reliable and safe — that's all I need." },
+  { name: "Ndapewa M.", location: "Oshakati", stars: 5, text: "Malu is always on time. I use them every morning to get to work. Reliable and safe, that's all I need." },
   { name: "Tuyeimo H.", location: "Ongwediva", stars: 5, text: "Finally a taxi service that actually shows up when they say they will. MI-WAY is changing things for the north." },
   { name: "Shikongo A.", location: "Ondangwa", stars: 4, text: "Good service, friendly drivers. I recommended Malu to my whole family. Looking forward to their other services." },
   { name: "Kamati P.", location: "Oshakati", stars: 5, text: "I run a small business and I need transport I can count on. Malu delivers every time. No complaints." },

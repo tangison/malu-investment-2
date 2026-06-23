@@ -61,7 +61,7 @@ export default function Hero() {
             >
               <span className="w-2 h-2 bg-amber rounded-full animate-pulse" />
               <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] sm:text-[11px] tracking-[0.2em] text-amber uppercase font-medium">
-                Now Accepting Rides — Northern Namibia
+                Now Accepting Rides, Northern Namibia
               </span>
             </motion.div>
 
@@ -85,7 +85,7 @@ export default function Hero() {
               transition={{ delay: 0.8, duration: 0.7 }}
               className="font-[family-name:var(--font-space-grotesk)] text-base sm:text-lg text-text-secondary leading-relaxed mb-8 max-w-lg"
             >
-              Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, and cleaning coming soon. One company, one vision, full Namibia coverage.
+              Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, and cleaning coming soon. One company, full Namibia coverage.
             </motion.p>
 
             {/* CTA buttons */}

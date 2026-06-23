@@ -8,7 +8,7 @@ export const metadata = {
   title: "About",
   description: "Malu Investment was founded in 2017 in Oshakati, Northern Namibia. From one taxi to a multi-service enterprise covering Oshakati, Ongwediva, and Ondangwa.",
   openGraph: {
-    title: "About Malu Investment — MI-WAY",
+    title: "About Malu Investment, MI-WAY",
     description: "Our story: from one taxi in Oshakati to a multi-service enterprise across Northern Namibia.",
     type: "website",
   },
@@ -27,22 +27,22 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="space-y-6">
               <p className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/80 leading-[1.8]">
-                Malu Investment was founded in 2017 with a straightforward belief: northern Namibia deserves reliable, professional services from people who live here. We started with one taxi and one phone number in Oshakati, and a commitment to showing up — every single time.
+                Malu Investment was founded in 2017 with a straightforward belief: northern Namibia deserves reliable, professional services from people who live here. We started with one taxi and one phone number in Oshakati, and a commitment to showing up, every single time.
               </p>
               <p className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/60 leading-[1.8]">
-                From our base in Oshakati, we&apos;ve expanded across the northern corridor — Ongwediva, Ondangwa, and beyond. Growth hasn&apos;t changed who we are. We still answer every call. We still know every street. We still run on the same principle: be there, be reliable, be professional.
+                From our base in Oshakati, we&apos;ve expanded across the northern corridor, Ongwediva, Ondangwa, and beyond. Growth hasn&apos;t changed who we are. We still answer every call. We still know every street. We still run on the same principle: be there, be reliable, be professional.
               </p>
               <h2 className="font-display text-2xl text-amber mt-8 mb-4">WHY NORTHERN NAMIBIA?</h2>
               <p className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/60 leading-[1.8]">
-                Northern Namibia is one of the most underserved regions in the country when it comes to professional, reliable services. The population is growing, the economy is expanding, but the service infrastructure hasn&apos;t kept pace. We saw an opportunity — not just for business, but for impact. When you operate in a community where you know people by name, accountability isn&apos;t a policy — it&apos;s personal.
+                Northern Namibia is one of the most underserved regions in the country when it comes to professional, reliable services. The population is growing, the economy is expanding, but the service infrastructure hasn&apos;t kept pace. We saw an opportunity, not just for business, but for impact. When you operate in a community where you know people by name, accountability isn&apos;t a policy, it&apos;s personal.
               </p>
               <p className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/60 leading-[1.8]">
-                Our roots are here. Our team lives here. When someone in Ongwediva calls for a ride at 5 AM, it&apos;s not a ticket number — it&apos;s a neighbor. That&apos;s why reliability matters more than scale, and why we&apos;re building MI-WAY from the ground up, starting right here.
+                Our roots are here. Our team lives here. When someone in Ongwediva calls for a ride at 5 AM, it&apos;s not a ticket number, it&apos;s a neighbor. That&apos;s why reliability matters more than scale, and why we&apos;re building MI-WAY from the ground up, starting right here.
               </p>
               <div className="bg-base-card border border-base-border p-6 mt-8">
                 <span className="font-display text-lg text-amber block mb-2">OUR VISION</span>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary italic">
-                  &ldquo;Full Namibia coverage — starting from where it matters most.&rdquo;
+                  &ldquo;Full Namibia coverage, starting from where it matters most.&rdquo;
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ export default function About() {
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" ref={sectionRef} className="relative bg-base border-b border-base-border">
+    <section id="about" ref={sectionRef} className="relative bg-light border-b border-light-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left — Story */}
@@ -39,7 +39,7 @@ export default function About() {
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               animate={isInView ? { clipPath: "inset(0% 0 0 0)", y: 0 } : {}}
               transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-              className="font-display text-[clamp(2.5rem,6vw,5rem)] text-text-primary leading-[0.9] mb-8"
+              className="font-display text-[clamp(2.5rem,6vw,5rem)] text-light-text leading-[0.9] mb-8"
             >
               FROM THE<br />
               <span className="text-amber">NORTH</span>
@@ -50,25 +50,25 @@ export default function About() {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3 }}
-                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/80 leading-[1.8]"
+                className="font-[family-name:var(--font-space-grotesk)] text-base text-light-text-secondary leading-[1.8]"
               >
-                Malu Investment was founded with a straightforward belief: northern Namibia deserves reliable, professional services from people who live here. We started with one taxi and one phone number in Oshakati, and a commitment to showing up — every single time.
+                Malu Investment was founded with a straightforward belief: northern Namibia deserves reliable, professional services from people who live here. We started with one taxi and one phone number in Oshakati, and a commitment to showing up, every single time.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.4 }}
-                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/60 leading-[1.8]"
+                className="font-[family-name:var(--font-space-grotesk)] text-base text-light-text-secondary leading-[1.8]"
               >
-                From our base in Oshakati, we&apos;ve expanded across the northern corridor — Ongwediva, Ondangwa, and beyond. Growth hasn&apos;t changed who we are. We still answer every call. We still know every street. We still run on the same principle: be there, be reliable, be professional.
+                From our base in Oshakati, we&apos;ve expanded across the northern corridor, Ongwediva, Ondangwa, and beyond. Growth hasn&apos;t changed who we are. We still answer every call. We still know every street. We still run on the same principle: be there, be reliable, be professional.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.5 }}
-                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/40 leading-[1.8]"
+                className="font-[family-name:var(--font-space-grotesk)] text-base text-light-text-muted leading-[1.8]"
               >
-                Why Northern Namibia? It&apos;s an underserved market with growing demand. We have local roots and community-first values. Our goal: full Namibia coverage, starting from where it matters most.
+                Why Northern Namibia? It&apos;s home. We have local roots and community-first values. Our goal: full Namibia coverage, starting from where it matters most.
               </motion.p>
             </div>
 
@@ -94,7 +94,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="relative overflow-hidden border border-base-border mb-8"
+              className="relative overflow-hidden border border-light-border mb-8"
             >
               <Image
                 src="/assets/brand/brand-asset-13.webp"
@@ -103,8 +103,8 @@ export default function About() {
                 height={440}
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-base/80 px-4 py-3 flex items-center justify-between">
-                <span className="font-[family-name:var(--font-space-grotesk)] text-[9px] tracking-[0.12em] text-text-muted uppercase">
+              <div className="absolute bottom-0 left-0 right-0 bg-light/80 px-4 py-3 flex items-center justify-between">
+                <span className="font-[family-name:var(--font-space-grotesk)] text-[9px] tracking-[0.12em] text-light-text-muted uppercase">
                   MI-WAY UNIT 02 /// Ongwediva
                 </span>
                 <span className="font-mono text-[9px] tracking-[0.12em] text-amber uppercase">
@@ -119,7 +119,7 @@ export default function About() {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="font-display text-xl text-text-primary mb-4">Milestones</h3>
+              <h3 className="font-display text-xl text-light-text mb-4">Milestones</h3>
               <div className="relative border-l-2 border-amber/20 pl-6 space-y-5">
                 {milestones.map((m, i) => (
                   <motion.div
@@ -129,9 +129,9 @@ export default function About() {
                     transition={{ delay: 0.6 + i * 0.1 }}
                     className="relative"
                   >
-                    <div className="absolute -left-[29px] top-1 w-3 h-3 bg-amber border-2 border-base" />
+                    <div className="absolute -left-[29px] top-1 w-3 h-3 bg-amber border-2 border-light" />
                     <span className="font-display text-lg text-amber">{m.year}</span>
-                    <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary">
+                    <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-light-text-secondary">
                       {m.event}
                     </p>
                   </motion.div>

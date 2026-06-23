@@ -8,7 +8,7 @@ export const metadata = {
   title: "Contact",
   description: "Book a taxi ride via WhatsApp at +264 81 211 1920. Operating across Oshakati, Ongwediva, and Ondangwa, Northern Namibia. 24/7 availability.",
   openGraph: {
-    title: "Contact — MI-WAY by Malu Investment",
+    title: "Contact, MI-WAY by Malu Investment",
     description: "Book a ride or get in touch. WhatsApp: +264 81 211 1920.",
     type: "website",
   },
@@ -68,7 +68,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-display text-2xl text-text-primary mb-4">Our Locations</h2>
               <div className="space-y-3 mb-8">
-                {["Oshakati — Main Hub", "Ongwediva — Extended Coverage", "Ondangwa — Northern Corridor"].map((loc) => (
+                {["Oshakati, Main Hub", "Ongwediva, Extended Coverage", "Ondangwa, Northern Corridor"].map((loc) => (
                   <div key={loc} className="bg-base-card border border-base-border p-5 flex items-center gap-3">
                     <span className="w-2 h-2 bg-amber flex-shrink-0" />
                     <span className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-primary">{loc}</span>
@@ -78,7 +78,7 @@ export default function ContactPage() {
               <div className="bg-amber-muted border border-amber/10 p-6">
                 <span className="font-display text-lg text-amber block mb-2">OPERATIONAL ZONE</span>
                 <p className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-secondary mb-4">
-                  Northern Namibia corridor — Oshakati, Ongwediva, Ondangwa. Expanding across Namibia.
+                  Northern Namibia corridor: Oshakati, Ongwediva, Ondangwa. Expanding across Namibia.
                 </p>
                 <div className="flex items-center justify-center gap-6 py-4 border-t border-amber/10">
                   <span className="font-display text-2xl text-text-primary">OSHAKATI</span>

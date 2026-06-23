@@ -8,7 +8,7 @@ export const metadata = {
   title: "Services",
   description: "Malu Investment services: Taxi transport across Oshakati, Ongwediva & Ondangwa. Construction, logistics, and cleaning coming soon. WhatsApp booking at +264 81 211 1920.",
   openGraph: {
-    title: "Our Services — MI-WAY by Malu Investment",
+    title: "Our Services, MI-WAY by Malu Investment",
     description: "Taxi transport, construction, logistics, and cleaning services across Northern Namibia.",
     type: "website",
   },

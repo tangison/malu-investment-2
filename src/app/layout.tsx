@@ -19,11 +19,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "MI-WAY by Malu Investment — Moving Namibia Forward",
+    default: "MI-WAY by Malu Investment, Moving Namibia Forward",
     template: "%s | MI-WAY by Malu Investment",
   },
   description:
-    "Northern Namibia multi-service enterprise. Taxi transport across Oshakati, Ongwediva, Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
+    "Northern Namibia multi-service enterprise. Taxi transport across Oshakati, Ongwediva, Ondangwa. Construction, logistics, cleaning, and MI-WAY fleet management.",
   authors: [{ name: "Malu Investment" }],
   icons: {
     icon: [
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     apple: "/assets/brand/brand-asset-01.webp",
   },
   openGraph: {
-    title: "MI-WAY by Malu Investment — Moving Namibia Forward",
+    title: "MI-WAY by Malu Investment, Moving Namibia Forward",
     description:
-      "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning — and MI-WAY fleet management.",
+      "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning, and MI-WAY fleet management.",
     type: "website",
     locale: "en_NA",
     siteName: "MI-WAY by Malu Investment",

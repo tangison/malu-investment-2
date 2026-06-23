@@ -13,7 +13,7 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     date: "June 2026",
     content: [
       "Getting around northern Namibia just got easier. If you're in Oshakati, Ongwediva, or Ondangwa and need a reliable ride, here's everything you need to know about booking with Malu Investment.",
-      "The simplest way to book is through WhatsApp. Save our number — +264 81 211 1920 — and send us a message anytime. We operate 24/7, so whether it's a 5 AM airport run or a late-night ride home, we're available. Just tell us your pickup location and where you're going, and we'll confirm your ride within minutes.",
+      "The simplest way to book is through WhatsApp. Save our number, +264 81 211 1920, and send us a message anytime. We operate 24/7, so whether it's a 5 AM airport run or a late-night ride home, we're available. Just tell us your pickup location and where you're going, and we'll confirm your ride within minutes.",
       "Our MI-WAY dispatch system ensures the nearest available driver is assigned to you. This means shorter wait times and more reliable service. Every ride is tracked, every driver is vetted, and every trip is logged for accountability.",
       "We cover the full northern corridor: Oshakati to Ongwediva (approximately 10 minutes), Oshakati to Ondangwa (approximately 30 minutes), and everywhere in between. We also serve surrounding areas and can arrange longer trips on request.",
       "Pricing is fair and distance-based. No surge pricing, no hidden fees. When you book, we'll give you an upfront estimate so there are no surprises. For regular riders, ask about our community group on WhatsApp for updates and occasional promotions.",
@@ -26,23 +26,23 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     date: "June 2026",
     content: [
       "MI-WAY started from a simple frustration: when you're running a taxi service across three cities with just a phone and a WhatsApp group, things fall through the cracks. Missed rides, untracked vehicles, no accountability. We needed a system, so we built one.",
-      "The core problem was dispatch coordination. When a customer calls for a ride in Ondangwa but all available drivers are in Oshakati, you need to know that instantly — not after 15 minutes of phone calls. MI-WAY's dispatch module matches riders with the nearest available driver in real-time.",
-      "Then there's tracking. Every MI-WAY vehicle has GPS tracking built in. As an operator, you can see where every car is, how long a trip should take, and whether a driver is available for the next pickup. For passengers, this means accountability — you know your ride is actually coming.",
+      "The core problem was dispatch coordination. When a customer calls for a ride in Ondangwa but all available drivers are in Oshakati, you need to know that instantly, not after 15 minutes of phone calls. MI-WAY's dispatch module matches riders with the nearest available driver in real-time.",
+      "Then there's tracking. Every MI-WAY vehicle has GPS tracking built in. As an operator, you can see where every car is, how long a trip should take, and whether a driver is available for the next pickup. For passengers, this means accountability. You know your ride is actually coming.",
       "The fleet management layer handles the operational side: maintenance schedules, driver performance metrics, daily trip logs, and revenue tracking. It's the kind of tool that large fleet operators in Windhoek or Johannesburg have, but built specifically for the realities of operating in northern Namibia.",
-      "We're currently in v2.6 — still in development, but already handling real rides every day across Oshakati and Ongwediva. The feedback from drivers and passengers has been invaluable. They're the ones shaping what MI-WAY becomes.",
-      "The roadmap includes passenger-side booking (currently WhatsApp-based), route optimization, fare estimation, and eventually, a driver app. We're building this one feature at a time, one ride at a time. No rush, no shortcuts — just reliable software for reliable service."
+      "We're currently in v2.6, still in development, but already handling real rides every day across Oshakati and Ongwediva. The feedback from drivers and passengers has been invaluable. They're the ones shaping what MI-WAY becomes.",
+      "The roadmap includes passenger-side booking (currently WhatsApp-based), route optimization, fare estimation, and eventually, a driver app. We're building this one feature at a time, one ride at a time. No rush, no shortcuts. Just reliable software for reliable service."
     ],
   },
   "northern-namibia-open-for-business": {
-    title: "Northern Namibia is Open for Business — Here's What You Need to Know",
+    title: "Northern Namibia is Open for Business, Here's What You Need to Know",
     category: "Insights",
     date: "June 2026",
     content: [
-      "For decades, Namibia's economic story has been told from Windhoek southward. But the north is changing fast, and the numbers tell a compelling story. Oshakati, Ongwediva, and Ondangwa form a triangle of growing urban centers with a combined population that rivals Windhoek — and they're underserved.",
+      "For decades, Namibia's economic story has been told from Windhoek southward. But the north is changing fast. Oshakati, Ongwediva, and Ondangwa form a triangle of growing urban centers with a combined population that rivals Windhoek, and they're underserved.",
       "The Oshana and Oshikoto regions are experiencing rapid urbanization. More people are moving to cities for work and education, which means more demand for services: transport, housing, construction, logistics, and professional services of all kinds. The gap between demand and supply is where opportunity lives.",
       "Infrastructure investment is accelerating. New roads, expanded commercial hubs, and growing residential developments are reshaping the landscape. The Oshakati Open Market, the Ongwediva Annual Trade Fair, and the steady growth of small businesses all point to an economy that's diversifying beyond traditional sectors.",
-      "For entrepreneurs and service providers, the north offers something the capital can't: less competition and more room to build relationships. When you operate in a community where word-of-mouth is the primary marketing channel, quality service doesn't just retain customers — it multiplies them.",
-      "At Malu Investment, we're betting on the north. Not because it's easy — operating here comes with real challenges, from infrastructure gaps to seasonal demand fluctuations — but because the fundamentals are strong. Population growth, urbanization, and underserved demand create a compelling case for long-term investment.",
+      "For entrepreneurs and service providers, the north offers something the capital can't: less competition and more room to build relationships. When you operate in a community where word-of-mouth is the primary marketing channel, quality service doesn't just retain customers, it multiplies them.",
+      "At Malu Investment, we're betting on the north. Not because it's easy. Operating here comes with real challenges, from infrastructure gaps to seasonal demand fluctuations. But the fundamentals are strong: population growth, urbanization, and underserved demand make a strong case for long-term investment.",
       "If you're thinking about expanding north, our advice is simple: start small, be consistent, and invest in relationships. The north rewards patience and reliability. Show up on time, deliver what you promise, and this market will reward you with loyalty that no advertising budget can buy."
     ],
   },

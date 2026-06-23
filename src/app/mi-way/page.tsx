@@ -8,7 +8,7 @@ export const metadata = {
   title: "MI-WAY Fleet Management",
   description: "MI-WAY is Malu Investment's in-house taxi fleet dispatch and management platform. Real-time dispatch, GPS tracking, and fleet analytics for Northern Namibia.",
   openGraph: {
-    title: "MI-WAY Fleet Management — Malu Investment",
+    title: "MI-WAY Fleet Management, Malu Investment",
     description: "Namibia's first local fleet management platform. Dispatch, track, manage.",
     type: "website",
   },

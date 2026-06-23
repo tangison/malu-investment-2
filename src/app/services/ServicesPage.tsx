@@ -9,9 +9,9 @@ const serviceDetails = [
     status: "Active",
     image: "/assets/brand/brand-asset-04.webp",
     waLink: "https://wa.me/264812111920?text=Hi+Malu!+I'd+like+to+book+a+taxi+ride.",
-    description: "Reliable point-to-point rides across Oshakati, Ongwediva, and Ondangwa. Our taxi service operates 24/7 — day or night, rain or shine, we show up. Every ride is MI-WAY dispatched for accountability and tracking.",
+    description: "Reliable point-to-point rides across Oshakati, Ongwediva, and Ondangwa. Our taxi service operates 24/7. Day or night, rain or shine, we show up. Every ride is MI-WAY dispatched for accountability and tracking.",
     features: ["24/7 Availability", "MI-WAY Dispatched", "Safe & Professional Drivers", "Oshakati ↔ Ongwediva ↔ Ondangwa", "WhatsApp Booking"],
-    pricing: "Contact for quote — fair, distance-based pricing",
+    pricing: "Contact for quote. Fair, distance-based pricing",
   },
   {
     title: "Construction & Renovation",
@@ -20,7 +20,7 @@ const serviceDetails = [
     waLink: "https://wa.me/264812111920?text=Hi!+I'm+interested+in+your+construction+services.",
     description: "Residential and commercial building projects across northern Namibia. Quality workmanship, honest timelines, and professional project management from start to finish.",
     features: ["Residential Building", "Commercial Projects", "Renovation & Remodeling", "Honest Timelines", "Quality Materials"],
-    pricing: "Contact for quote — project-based pricing",
+    pricing: "Contact for quote. Project-based pricing",
   },
   {
     title: "Logistics & Import/Export",
@@ -29,7 +29,7 @@ const serviceDetails = [
     waLink: "https://wa.me/264812111920?text=Hi!+I+need+logistics+support.",
     description: "Goods movement across Namibia and across borders. Cross-border capable supply chain support that keeps your business moving. From warehousing to last-mile delivery.",
     features: ["Cross-Border Transport", "Supply Chain Support", "Warehousing", "Last-Mile Delivery", "Import/Export Documentation"],
-    pricing: "Contact for quote — route-based pricing",
+    pricing: "Contact for quote. Route-based pricing",
   },
   {
     title: "Cleaning & Carwash",
@@ -38,7 +38,7 @@ const serviceDetails = [
     waLink: "https://wa.me/264812111920?text=Hi!+I'd+like+to+book+a+cleaning+service.",
     description: "Professional cleaning for homes, offices, and vehicles. Every space spotless, every time. Northern Namibia coverage from day one when we launch.",
     features: ["Home Cleaning", "Office Cleaning", "Vehicle Carwash", "Deep Cleaning", "Scheduled Services"],
-    pricing: "Contact for quote — service-based pricing",
+    pricing: "Contact for quote. Service-based pricing",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function ServicesPage() {
           WHAT WE DO
         </h1>
         <p className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary max-w-2xl mb-12">
-          Four service verticals built on one principle: show up, be reliable, deliver. From taxi dispatch on Oshakati&apos;s roads to logistics corridors connecting Namibia.
+          Four service lines, one standard: show up and deliver. From taxi dispatch on Oshakati&apos;s roads to logistics corridors connecting Namibia.
         </p>
       </motion.div>
 

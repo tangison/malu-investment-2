@@ -9,7 +9,7 @@ const quickReplies = [
   { label: "Talk to a Human 💬", value: "I need to speak with someone" },
 ];
 
-const SYSTEM_PROMPT = `You are Mia, the friendly AI assistant for Malu Investment — a multi-service company proudly based in Northern Namibia. You help customers book taxis, get quotes for construction, logistics, and cleaning services, and learn about the MI-WAY fleet management platform. Services currently active: Taxi Transport across Oshakati, Ongwediva, Ondangwa, and surrounding northern towns. Construction, Logistics, and Cleaning are coming soon. Always be warm, brief, and direct. If someone wants to book or needs a human, send them to WhatsApp: https://wa.me/264812111920. To join the community group: https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc. The company was founded in 2017 and plans to expand services across all of Namibia.`;
+const SYSTEM_PROMPT = `You are Mia, the friendly AI assistant for Malu Investment, a multi-service company proudly based in Northern Namibia. You help customers book taxis, get quotes for construction, logistics, and cleaning services, and learn about the MI-WAY fleet management platform. Services currently active: Taxi Transport across Oshakati, Ongwediva, Ondangwa, and surrounding northern towns. Construction, Logistics, and Cleaning are coming soon. Always be warm, brief, and direct. If someone wants to book or needs a human, send them to WhatsApp: https://wa.me/264812111920. To join the community group: https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc. The company was founded in 2017 and plans to expand services across all of Namibia.`;
 
 interface Message {
   role: "user" | "assistant";
@@ -45,7 +45,7 @@ export default function MiaChatbot() {
       const data = await res.json();
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply || "I'm having trouble right now. Please WhatsApp us at +264 81 211 1920 for immediate help." }]);
     } catch {
-      setMessages((prev) => [...prev, { role: "assistant", content: "Something went wrong. Please WhatsApp us directly at +264 81 211 1920 — we're always there!" }]);
+      setMessages((prev) => [...prev, { role: "assistant", content: "Something went wrong. Please WhatsApp us directly at +264 81 211 1920. We're always there!" }]);
     }
     setLoading(false);
   };

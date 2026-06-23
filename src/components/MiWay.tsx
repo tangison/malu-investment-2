@@ -88,7 +88,7 @@ export default function MiWay() {
                 transition={{ delay: 0.6 }}
                 className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/70 leading-relaxed"
               >
-                MI-WAY is a taxi fleet dispatch and management platform developed in-house. Born from real operational needs on Oshakati&apos;s roads — dispatch, tracking, management. Built for operators who need reliability over features.
+                MI-WAY is a taxi fleet dispatch and management platform developed in-house. Born from real operational needs on Oshakati&apos;s roads: dispatch, tracking, management. Built for operators who need reliability over features.
               </motion.p>
             </div>
 

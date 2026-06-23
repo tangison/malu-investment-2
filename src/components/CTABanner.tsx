@@ -43,7 +43,7 @@ export default function CTABanner() {
               transition={{ delay: 0.3 }}
               className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/50 leading-relaxed mb-8 max-w-md"
             >
-              Operating across Oshakati, Ongwediva, and Ondangwa. Call or WhatsApp — we pick up fast, we show up on time, and we get you there safely.
+              Operating across Oshakati, Ongwediva, and Ondangwa. Call or WhatsApp. We pick up fast, show up on time, and get you there safely.
             </motion.p>
 
             <motion.div
