@@ -153,3 +153,22 @@ Stage Summary:
 - Accessibility: skip link, ARIA on FAQ, chat labels, body scroll lock
 - Error handling: error boundary + custom 404
 - All 7 routes returning 200 OK
+---
+Task ID: v5.3
+Agent: Main Agent
+Task: Polish pass + Driver-to-Owner page for MI-WAY website
+
+Work Log:
+- Fix 1: Removed logo box in Footer.tsx (bg-amber/10 p-1 wrapper). Navbar and Hero were already fixed in prior session.
+- Fix 2: Global em dash removal across ALL files. Found 40+ instances across 15 files. Replaced with commas, periods, or sentence rewrites. Only developer-facing JSX/CSS comments retain em dashes.
+- Fix 3: Rebuilt Footer.tsx from 4-column verbose layout to compact 1-2 row minimalist design with just logo, copyright, and inline nav links. Removed all verbose descriptions, section labels, and redundant links.
+- Fix 4: Added light section color tokens (light, light-border, light-text, light-text-secondary, light-text-muted) to globals.css. Applied light backgrounds to Services (bg-light), About (bg-light), and FAQ (bg-light) sections for dark/light rhythm. Updated text colors and card styles in those sections.
+- Fix 5: Copy cleanup - replaced "service verticals" with "service lines", removed "compelling story", cleaned up formal phrasing across blog posts and components.
+- New: Created /driver-to-owner page with full 3-step programme content, provisions/expectations, value proposition, and CTA. Added to Navbar and sitemap.
+- Added skills/ and scripts/ to tsconfig.json exclude to fix TypeScript build error.
+- Build successful with all 16 routes generated. Deployed to Vercel.
+
+Stage Summary:
+- All 5 polish fixes applied across 23 files
+- New /driver-to-owner page live
+- Site deployed: https://mi-way-by-malu.vercel.app/
