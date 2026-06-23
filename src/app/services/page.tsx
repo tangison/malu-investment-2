@@ -6,7 +6,7 @@ import ServicesPage from "./ServicesPage";
 
 export const metadata = {
   title: "Services",
-  description: "Malu Investment services: Taxi transport across Oshakati, Ongwediva & Ondangwa. Construction, logistics, and cleaning coming soon. WhatsApp booking at +264 81 211 1920.",
+  description: "Taxi transport across Oshakati, Ongwediva & Ondangwa. Construction, logistics, cleaning coming soon. WhatsApp booking +264 81 211 1920.",
   openGraph: {
     title: "Our Services, MI-WAY by Malu Investment",
     description: "Taxi transport, construction, logistics, and cleaning services across Northern Namibia.",
@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <div className="min-h-screen flex flex-col bg-base">
       <Navbar />
-      <main className="flex-1 pt-20"><ServicesPage /></main>
+      <main id="main" className="flex-1 pt-20"><ServicesPage /></main>
       <Footer />
       <FloatingWhatsApp />
       <MiaChatbot />

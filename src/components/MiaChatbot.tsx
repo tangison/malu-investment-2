@@ -9,8 +9,6 @@ const quickReplies = [
   { label: "Talk to a Human 💬", value: "I need to speak with someone" },
 ];
 
-const SYSTEM_PROMPT = `You are Mia, the friendly AI assistant for Malu Investment, a multi-service company proudly based in Northern Namibia. You help customers book taxis, get quotes for construction, logistics, and cleaning services, and learn about the MI-WAY fleet management platform. Services currently active: Taxi Transport across Oshakati, Ongwediva, Ondangwa, and surrounding northern towns. Construction, Logistics, and Cleaning are coming soon. Always be warm, brief, and direct. If someone wants to book or needs a human, send them to WhatsApp: https://wa.me/264812111920. To join the community group: https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc. The company was founded in 2017 and plans to expand services across all of Namibia.`;
-
 interface Message {
   role: "user" | "assistant";
   content: string;
@@ -40,7 +38,7 @@ export default function MiaChatbot() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: [...messages, userMsg], system: SYSTEM_PROMPT }),
+        body: JSON.stringify({ messages: [...messages, userMsg] }),
       });
       const data = await res.json();
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply || "I'm having trouble right now. Please WhatsApp us at +264 81 211 1920 for immediate help." }]);
@@ -59,7 +57,7 @@ export default function MiaChatbot() {
         transition={{ delay: 2, type: "spring" }}
         onClick={() => setOpen(!open)}
         className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-base-card border border-amber/30 rounded-full flex items-center justify-center shadow-lg hover:border-amber transition-colors"
-        aria-label="Open Mia chatbot"
+        aria-label={open ? "Close Mia chatbot" : "Open Mia chatbot"}
       >
         <span className="font-display text-amber text-lg">{open ? "✕" : "M"}</span>
       </motion.button>

@@ -41,7 +41,7 @@ export default function MiWay() {
               transition={{ delay: 0.4 }}
               className="mt-6 bg-base/50 border border-amber/10 p-4 w-full max-w-xs"
             >
-              <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.12em] text-amber/50 uppercase space-y-1">
+              <div className="font-mono text-[9px] sm:text-[10px] tracking-[0.12em] text-amber uppercase space-y-1">
                 <p>&gt; SYSTEM: MI-WAY v2.6</p>
                 <p>&gt; STATUS: <span className="text-whatsapp">In Development</span><span className="blink">_</span></p>
                 <p>&gt; DEPLOY: Northern Namibia</p>
@@ -59,7 +59,7 @@ export default function MiWay() {
               className="flex items-center gap-3 mb-5"
             >
               <div className="w-8 h-px bg-amber/30" />
-              <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-text-secondary/50 uppercase">
+              <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-text-secondary uppercase">
                 Fleet Management Platform
               </span>
             </motion.div>
@@ -76,7 +76,7 @@ export default function MiWay() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.5 }}
-              className="font-[family-name:var(--font-space-grotesk)] text-sm tracking-[0.2em] text-amber/60 uppercase mb-8"
+              className="font-[family-name:var(--font-space-grotesk)] text-sm tracking-[0.2em] text-amber uppercase mb-8"
             >
               by Malu Investment /// Dispatch System
             </motion.p>
@@ -86,7 +86,7 @@ export default function MiWay() {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.6 }}
-                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/70 leading-relaxed"
+                className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary leading-relaxed"
               >
                 MI-WAY is a taxi fleet dispatch and management platform developed in-house. Born from real operational needs on Oshakati&apos;s roads: dispatch, tracking, management. Built for operators who need reliability over features.
               </motion.p>
@@ -108,10 +108,10 @@ export default function MiWay() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-3 bg-navy/80">
-                <span className="font-mono text-[8px] tracking-[0.12em] text-text-secondary/50 uppercase">
+                <span className="font-mono text-[8px] tracking-[0.12em] text-text-secondary uppercase">
                   OSHAKATI COMMERCIAL HUB /// AUTHORIZED PARKING
                 </span>
-                <span className="font-mono text-[8px] tracking-[0.12em] text-amber/60 uppercase">
+                <span className="font-mono text-[8px] tracking-[0.12em] text-amber uppercase">
                   REV 2.6
                 </span>
               </div>

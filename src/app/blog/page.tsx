@@ -43,7 +43,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen flex flex-col bg-base">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main id="main" className="flex-1 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-amber uppercase block mb-3">Blog & Resources</span>
           <h1 className="font-display text-[clamp(2.5rem,6vw,5rem)] text-text-primary leading-[0.9] mb-4">INSIGHTS</h1>

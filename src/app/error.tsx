@@ -12,7 +12,7 @@ export default function Error({
   return (
     <div className="min-h-screen flex items-center justify-center bg-base px-4">
       <div className="text-center max-w-md">
-        <h2 className="font-display text-4xl text-amber mb-4">SOMETHING WENT WRONG</h2>
+        <h1 className="font-display text-4xl text-amber mb-4">SOMETHING WENT WRONG</h1>
         <p className="font-sans text-sm text-text-secondary mb-6">
           We hit an unexpected error. This has been logged and we&apos;ll look into it.
         </p>

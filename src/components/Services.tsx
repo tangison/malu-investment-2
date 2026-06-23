@@ -193,7 +193,7 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
         <span className={`absolute top-3 right-3 font-[family-name:var(--font-space-grotesk)] text-[9px] tracking-[0.15em] uppercase font-bold px-3 py-1.5 ${
           service.status === "Active"
             ? "bg-amber text-base"
-            : "bg-white/80 text-light-text-muted border border-light-border"
+            : "bg-white/80 text-light-text-secondary border border-light-border"
         }`}>
           {service.status}
         </span>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Space_Grotesk } from "next/font/google";
 import LenisProvider from "@/providers/LenisProvider";
 import "./globals.css";
@@ -17,7 +17,14 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#F5A623",
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://malu-investment-2.vercel.app"),
   title: {
     default: "MI-WAY by Malu Investment, Moving Namibia Forward",
     template: "%s | MI-WAY by Malu Investment",
@@ -38,6 +45,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NA",
     siteName: "MI-WAY by Malu Investment",
+    images: [{ url: "/assets/brand/brand-asset-16.webp", width: 1200, height: 630, alt: "MI-WAY by Malu Investment" }],
+    url: "https://malu-investment-2.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MI-WAY by Malu Investment, Moving Namibia Forward",
+    description: "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning, and MI-WAY fleet management.",
+    images: ["/assets/brand/brand-asset-16.webp"],
   },
   alternates: {
     canonical: "https://malu-investment-2.vercel.app",
@@ -85,7 +100,6 @@ export default function RootLayout({
                 },
                 sameAs: [
                   "https://www.facebook.com/share/p/1HoFSQW4o2/",
-                  "https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc",
                 ],
               }),
             }}

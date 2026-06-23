@@ -5,7 +5,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
 export const metadata = {
-  title: "Join Mi-Way: From Driver to Owner",
+  title: "Driver-to-Owner Programme",
   description:
     "Turn your driving performance into asset ownership. Discover Mi-Way's transparent three-phase Driver-to-Owner programme in Namibia.",
   openGraph: {
@@ -23,7 +23,7 @@ export default function DriverToOwnerPage() {
   return (
     <div className="min-h-screen flex flex-col bg-base">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main id="main" className="flex-1 pt-20">
         {/* Hero */}
         <section className="bg-base py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

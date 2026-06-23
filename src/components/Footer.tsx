@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <Image
               src="/assets/brand/brand-asset-01.webp"
-              alt="Malu Investment"
+              alt="MI-WAY by Malu Investment logo"
               width={20}
               height={20}
               className="object-contain"
@@ -24,10 +24,11 @@ export default function Footer() {
           </div>
 
           {/* Nav links inline */}
-          <nav className="flex items-center gap-6">
+          <nav aria-label="Footer navigation" className="flex items-center gap-6">
             {[
               { href: "/", label: "Home" },
               { href: "/services", label: "Services" },
+              { href: "/mi-way", label: "MI-WAY" },
               { href: "/driver-to-owner", label: "Driver-to-Owner" },
               { href: "/about", label: "About" },
               { href: "/blog", label: "Blog" },
@@ -36,7 +37,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-[family-name:var(--font-space-grotesk)] text-[11px] tracking-[0.1em] text-text-muted hover:text-amber uppercase transition-colors"
+                className="font-[family-name:var(--font-space-grotesk)] text-[11px] tracking-[0.1em] text-text-muted hover:text-amber uppercase transition-colors min-h-[44px] flex items-center"
               >
                 {link.label}
               </Link>

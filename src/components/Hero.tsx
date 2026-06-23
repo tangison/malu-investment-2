@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -38,7 +39,7 @@ export default function Hero() {
       </div>
 
       {/* Ticker tape */}
-      <div className="absolute top-16 sm:top-20 left-0 right-0 z-10 border-y border-amber/20 bg-base/50 backdrop-blur-sm overflow-hidden">
+      <div className="absolute top-16 sm:top-20 left-0 right-0 z-10 border-y border-amber/20 bg-base/50 backdrop-blur-sm overflow-hidden" aria-hidden="true">
         <div className="animate-ticker whitespace-nowrap py-2">
           <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] sm:text-[11px] tracking-[0.2em] text-amber/70 uppercase">
             {'OSHAKATI ✦ ONGWEDIVA ✦ ONDANGWA ✦ TAXI TRANSPORT ✦ CONSTRUCTION ✦ LOGISTICS ✦ CLEANING ✦ MI-WAY FLEET ✦ NAMIBIA ✦ 24/7 AVAILABLE ✦ '}
@@ -106,12 +107,12 @@ export default function Hero() {
                 </svg>
                 Book a Ride
               </a>
-              <a
+              <Link
                 href="/services"
                 className="flex items-center gap-2 border border-base-border text-text-secondary font-[family-name:var(--font-space-grotesk)] text-sm uppercase tracking-[0.1em] font-medium px-8 py-4 hover:border-amber/50 hover:text-amber transition-all duration-200"
               >
                 Our Services
-              </a>
+              </Link>
             </motion.div>
 
             {/* Stats strip — counter animation */}

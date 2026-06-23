@@ -14,6 +14,8 @@ export function middleware(request: NextRequest) {
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://sfile.chatglm.cn; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://openrouter.ai;"
   );
   response.headers.set("X-DNS-Prefetch-Control", "on");
+  response.headers.set("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
+  response.headers.set("X-XSS-Protection", "0");
 
   return response;
 }

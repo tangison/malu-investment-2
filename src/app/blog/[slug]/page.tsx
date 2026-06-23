@@ -6,11 +6,12 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
-const blogPosts: Record<string, { title: string; category: string; date: string; content: string[] }> = {
+const blogPosts: Record<string, { title: string; category: string; date: string; description: string; content: string[] }> = {
   "how-to-book-taxi-oshakati": {
-    title: "How to Book a Taxi in Oshakati, Ongwediva & Ondangwa",
+    title: "Book a Taxi in Oshakati",
     category: "Guide",
     date: "June 2026",
+    description: "A practical guide to booking taxi rides across Oshakati, Ongwediva, and Ondangwa with Malu Investment via WhatsApp.",
     content: [
       "Getting around northern Namibia just got easier. If you're in Oshakati, Ongwediva, or Ondangwa and need a reliable ride, here's everything you need to know about booking with Malu Investment.",
       "The simplest way to book is through WhatsApp. Save our number, +264 81 211 1920, and send us a message anytime. We operate 24/7, so whether it's a 5 AM airport run or a late-night ride home, we're available. Just tell us your pickup location and where you're going, and we'll confirm your ride within minutes.",
@@ -21,9 +22,10 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     ],
   },
   "mi-way-building-namibia-fleet-app": {
-    title: "MI-WAY: How We're Building Namibia's First Local Fleet Management App",
+    title: "Building Namibia's Fleet App",
     category: "Tech",
     date: "June 2026",
+    description: "From one taxi in Oshakati to a dispatch platform covering three cities. The story behind MI-WAY.",
     content: [
       "MI-WAY started from a simple frustration: when you're running a taxi service across three cities with just a phone and a WhatsApp group, things fall through the cracks. Missed rides, untracked vehicles, no accountability. We needed a system, so we built one.",
       "The core problem was dispatch coordination. When a customer calls for a ride in Ondangwa but all available drivers are in Oshakati, you need to know that instantly, not after 15 minutes of phone calls. MI-WAY's dispatch module matches riders with the nearest available driver in real-time.",
@@ -34,9 +36,10 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     ],
   },
   "northern-namibia-open-for-business": {
-    title: "Northern Namibia is Open for Business, Here's What You Need to Know",
+    title: "Northern Namibia Business Guide",
     category: "Insights",
     date: "June 2026",
+    description: "Why Oshakati, Ongwediva, and Ondangwa are becoming the next business frontier in Namibia.",
     content: [
       "For decades, Namibia's economic story has been told from Windhoek southward. But the north is changing fast. Oshakati, Ongwediva, and Ondangwa form a triangle of growing urban centers with a combined population that rivals Windhoek, and they're underserved.",
       "The Oshana and Oshikoto regions are experiencing rapid urbanization. More people are moving to cities for work and education, which means more demand for services: transport, housing, construction, logistics, and professional services of all kinds. The gap between demand and supply is where opportunity lives.",
@@ -58,10 +61,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Post Not Found" };
   return {
     title: post.title,
-    description: post.content[0]?.slice(0, 160) || "",
+    description: post.description || post.content[0]?.slice(0, 160) || "",
     openGraph: {
       title: post.title,
-      description: post.content[0]?.slice(0, 160) || "",
+      description: post.description || post.content[0]?.slice(0, 160) || "",
       type: "article",
     },
     alternates: { canonical: `https://malu-investment-2.vercel.app/blog/${slug}` },
@@ -83,7 +86,7 @@ async function BlogPostContent({ params }: { params: Promise<{ slug: string }> }
   return (
     <div className="min-h-screen flex flex-col bg-base">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main id="main" className="flex-1 pt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <Link href="/blog" className="inline-flex items-center gap-2 font-[family-name:var(--font-space-grotesk)] text-[11px] tracking-[0.12em] text-amber uppercase hover:text-amber-light transition-colors mb-8">
             ← Back to Blog
@@ -97,7 +100,7 @@ async function BlogPostContent({ params }: { params: Promise<{ slug: string }> }
             ))}
           </div>
           <div className="mt-12 border-t border-base-border pt-8">
-            <h3 className="font-display text-xl text-text-primary mb-4">Need a ride? Talk to us.</h3>
+            <h2 className="font-display text-xl text-text-primary mb-4">Need a ride? Talk to us.</h2>
             <a
               href="https://wa.me/264812111920?text=Hi+Malu!+I'd+like+to+book+a+ride."
               target="_blank"

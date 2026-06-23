@@ -8,7 +8,7 @@ export default function CTABanner() {
   const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
 
   return (
-    <section id="contact" ref={sectionRef} className="relative bg-navy overflow-hidden scanlines">
+    <section id="cta-banner" ref={sectionRef} className="relative bg-navy overflow-hidden scanlines">
       {/* Amber accent stripe */}
       <div className="h-1 bg-amber" />
 
@@ -23,7 +23,7 @@ export default function CTABanner() {
               className="flex items-center gap-3 mb-5"
             >
               <div className="w-6 h-px bg-amber" />
-              <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-text-secondary/50 uppercase">
+              <span className="font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.2em] text-text-secondary uppercase">
                 Get in Touch
               </span>
             </motion.div>
@@ -41,7 +41,7 @@ export default function CTABanner() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
-              className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary/50 leading-relaxed mb-8 max-w-md"
+              className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary leading-relaxed mb-8 max-w-md"
             >
               Operating across Oshakati, Ongwediva, and Ondangwa. Call or WhatsApp. We pick up fast, show up on time, and get you there safely.
             </motion.p>
@@ -65,7 +65,7 @@ export default function CTABanner() {
               </a>
               <a
                 href="tel:+264812111920"
-                className="flex items-center gap-2 border border-base-border text-text-secondary/50 hover:text-amber font-[family-name:var(--font-space-grotesk)] text-sm transition-colors px-8 py-4 hover:border-amber/30"
+                className="flex items-center gap-2 border border-base-border text-text-secondary hover:text-amber font-[family-name:var(--font-space-grotesk)] text-sm transition-colors px-8 py-4 hover:border-amber/30"
               >
                 +264 81 211 1920
               </a>

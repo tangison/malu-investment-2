@@ -65,7 +65,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-1" role="navigation" aria-label="Main navigation">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -91,8 +91,10 @@ export default function Navbar() {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 text-text-primary hover:text-amber transition-colors"
+              className="md:hidden p-2 text-text-primary hover:text-amber transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square">
                 {mobileOpen ? (
@@ -113,6 +115,10 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
             className="fixed inset-0 z-40 bg-base/98 backdrop-blur-lg pt-20"
           >
             <div className="flex flex-col px-6 py-8 gap-1">

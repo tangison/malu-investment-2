@@ -12,6 +12,19 @@ const faqs = [
   { q: "How do I join the WhatsApp community?", a: "Join our WhatsApp community here: https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc. Get updates, promotions, and direct access to our dispatch team." },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
 export default function FAQ() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -19,6 +32,10 @@ export default function FAQ() {
 
   return (
     <section ref={ref} className="bg-light border-y border-light-border py-16 sm:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-6 h-px bg-amber" />
@@ -43,6 +60,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 aria-expanded={openIndex === i}
                 aria-controls={`faq-answer-${i}`}
+                id={`faq-q-${i}`}
                 className="w-full flex items-center justify-between py-5 text-left group"
               >
                 <span className="font-[family-name:var(--font-space-grotesk)] text-sm sm:text-base text-light-text group-hover:text-amber transition-colors pr-4">
