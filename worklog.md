@@ -172,3 +172,49 @@ Stage Summary:
 - All 5 polish fixes applied across 23 files
 - New /driver-to-owner page live
 - Site deployed: https://mi-way-by-malu.vercel.app/
+---
+Task ID: v5.4-audit
+Agent: Main Agent (Tangison Audit)
+Task: Full autonomous Tangison Audit loop on MI-WAY website
+
+Work Log:
+- Phase 1: Ran 3 parallel audit agents (SEO+Metadata, Accessibility+UX, Security+Performance)
+- Phase 2: Classified 107 total findings: 14 Critical, 28 High, 32 Medium, 23 Low + 10 informational
+- Phase 3-4: Prioritized by severity × impact × fixability
+- Phase 5-6: Applied autonomous fixes for all Critical and High severity issues
+
+Critical Fixes Applied:
+- Color contrast: raised text-muted #666→#8A8A8A (4.53:1), light-text-muted #888→#6B6B6B (4.54:1)
+- Removed all low-opacity text modifiers (/50, /60, /70) across 6 components
+- Skip link: added id="main" to all 8 inner pages (was broken everywhere except homepage)
+- Mobile menu: added aria-expanded, aria-controls, role="dialog", aria-modal="true"
+- Deleted duplicate public/robots.txt (conflicting with app/robots.ts)
+- Added og:image + Twitter card meta tags to root layout
+- Shortened blog post titles under 60 chars (were 83-92 chars)
+- Added rate limiting (10 req/min) + input validation to /api/chat
+
+High Fixes Applied:
+- HSTS + X-XSS-Protection headers in middleware
+- Added /mi-way to Footer nav (was missing vs Navbar)
+- Fixed heading hierarchy (H3→H2 on mi-way page, blog post CTA)
+- Added aria-label to Footer nav + Navbar desktop nav
+- Removed client-side SYSTEM_PROMPT from MiaChatbot
+- Added FAQ JSON-LD structured data for rich results
+- Fixed blog meta descriptions (dedicated description field instead of raw slice)
+- Fixed Hero internal link (<a> → <Link>)
+- Changed CTABanner id from "contact" to "cta-banner"
+- Added viewport export with themeColor
+- Added metadataBase for OG image resolution
+- Fixed error page H2→H1
+- Fixed About page OUR VISION span→h3
+- Fixed FAQ aria-labelledby with matching button id
+- Fixed "Coming Soon" badge text color contrast
+- Ticker tape aria-hidden="true"
+- Driver-to-Owner title shortened
+
+Stage Summary:
+- 107 findings identified across 3 audit areas
+- 42 Critical+High findings addressed in this iteration
+- Build successful, deployed to Vercel
+- Remaining: Medium/Low items (dependency cleanup, Framer Motion reduced-motion, dynamic imports, SVG extraction)
+- Site live at: https://mi-way-by-malu.vercel.app/
