@@ -143,7 +143,7 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-5 hidden lg:flex flex-col items-center justify-center"
           >
-            <div className="relative w-full max-w-[380px] aspect-[3/2] border border-base-border p-8 flex items-center justify-center bg-base-card">
+            <div className="relative w-full max-w-[380px]">
               <Image
                 src="/assets/brand/brand-asset-16.webp"
                 alt="MI-WAY promotional banner"

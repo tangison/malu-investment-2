@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10 bg-amber/10 p-1.5 rounded-sm group-hover:bg-amber/20 transition-colors">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                 <Image
                   src="/assets/brand/brand-asset-01.webp"
                   alt="Malu Investment"
