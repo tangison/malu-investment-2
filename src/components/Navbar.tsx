@@ -43,25 +43,20 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                 <Image
-                  src="/assets/brand/brand-asset-01.webp"
-                  alt="Malu Investment"
-                  width={32}
-                  height={32}
+                  src="/assets/brand/miway-shield-logo.png"
+                  alt="MI-WAY Shield Logo"
+                  width={40}
+                  height={40}
                   className="object-contain w-full h-full"
                   priority
                 />
               </div>
-              <div>
-                <span className="font-display text-lg sm:text-xl text-text-primary leading-none">
-                  MI-WAY
-                </span>
-                <span className="block font-[family-name:var(--font-space-grotesk)] text-[8px] sm:text-[9px] tracking-[0.2em] text-text-muted uppercase leading-none mt-0.5">
-                  by Malu Investment
-                </span>
-              </div>
+              <span className="font-[family-name:var(--font-space-grotesk)] text-[8px] sm:text-[9px] tracking-[0.15em] text-text-muted uppercase leading-none">
+                by Malu Investment
+              </span>
             </Link>
 
             {/* Desktop nav */}

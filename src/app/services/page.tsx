@@ -12,7 +12,7 @@ export const metadata = {
     description: "Taxi transport, construction, logistics, and cleaning services across Northern Namibia.",
     type: "website",
   },
-  alternates: { canonical: "https://malu-investment-2.vercel.app/services" },
+  alternates: { canonical: "https://www.mi-way.org/services" },
 };
 
 export default function Page() {

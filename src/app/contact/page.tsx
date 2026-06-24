@@ -12,7 +12,7 @@ export const metadata = {
     description: "Book a ride or get in touch. WhatsApp: +264 81 211 1920.",
     type: "website",
   },
-  alternates: { canonical: "https://malu-investment-2.vercel.app/contact" },
+  alternates: { canonical: "https://www.mi-way.org/contact" },
 };
 
 export default function ContactPage() {

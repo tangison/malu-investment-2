@@ -63,7 +63,7 @@ export async function POST(req: NextRequest) {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${apiKey}`,
-          "HTTP-Referer": "https://malu-investment-2.vercel.app",
+          "HTTP-Referer": "https://www.mi-way.org",
           "X-Title": "Mia - MI-WAY Assistant",
         },
         body: JSON.stringify({
@@ -106,7 +106,7 @@ export async function POST(req: NextRequest) {
     } else if (lastUserMsg.includes("community") || lastUserMsg.includes("group") || lastUserMsg.includes("join")) {
       reply = "Join our WhatsApp community: https://chat.whatsapp.com/CATYtLo7CQe60hGZDXlljc. Get updates and direct access to our team!";
     } else if (lastUserMsg.includes("driver") || lastUserMsg.includes("owner") || lastUserMsg.includes("programme")) {
-      reply = "Our Driver-to-Owner programme helps you go from driver to vehicle owner in 3 steps. Learn more at https://malu-investment-2.vercel.app/driver-to-owner or WhatsApp us!";
+      reply = "Our Driver-to-Owner programme helps you go from driver to vehicle owner in 3 steps. Learn more at https://www.mi-way.org/driver-to-owner or WhatsApp us!";
     } else {
       reply = "Hey! I'm Mia. I can help you book a ride, tell you about our services, or connect you with our team on WhatsApp. What do you need?";
     }

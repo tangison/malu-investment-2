@@ -20,11 +20,11 @@ const spaceGrotesk = Space_Grotesk({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#F5A623",
+  themeColor: "#1a2a4a",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://malu-investment-2.vercel.app"),
+  metadataBase: new URL("https://www.mi-way.org"),
   title: {
     default: "MI-WAY by Malu Investment, Moving Namibia Forward",
     template: "%s | MI-WAY by Malu Investment",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Malu Investment" }],
   icons: {
     icon: [
-      { url: "/assets/brand/brand-asset-01.webp", sizes: "32x32" },
+      { url: "/assets/brand/miway-shield-logo.png", sizes: "32x32" },
     ],
-    apple: "/assets/brand/brand-asset-01.webp",
+    apple: "/assets/brand/miway-shield-logo.png",
   },
   openGraph: {
     title: "MI-WAY by Malu Investment, Moving Namibia Forward",
@@ -45,17 +45,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NA",
     siteName: "MI-WAY by Malu Investment",
-    images: [{ url: "/assets/brand/brand-asset-16.webp", width: 1200, height: 630, alt: "MI-WAY by Malu Investment" }],
-    url: "https://malu-investment-2.vercel.app",
+    images: [{ url: "/assets/brand/miway-shield-logo.png", width: 432, height: 577, alt: "MI-WAY by Malu Investment" }],
+    url: "https://www.mi-way.org",
   },
   twitter: {
     card: "summary_large_image",
     title: "MI-WAY by Malu Investment, Moving Namibia Forward",
     description: "Taxi transport across Oshakati, Ongwediva, and Ondangwa. Construction, logistics, cleaning, and MI-WAY fleet management.",
-    images: ["/assets/brand/brand-asset-16.webp"],
+    images: ["/assets/brand/miway-shield-logo.png"],
   },
   alternates: {
-    canonical: "https://malu-investment-2.vercel.app",
+    canonical: "https://www.mi-way.org",
   },
 };
 
@@ -83,7 +83,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 name: "Malu Investment",
-                url: "https://malu-investment-2.vercel.app",
+                url: "https://www.mi-way.org",
                 description: "Northern Namibia multi-service enterprise. Taxi transport, construction, logistics, cleaning, and MI-WAY fleet management.",
                 foundingDate: "2017",
                 address: {

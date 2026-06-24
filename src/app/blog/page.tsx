@@ -12,7 +12,7 @@ export const metadata = {
     description: "Insights from Northern Namibia: taxi guides, tech stories, and business tips.",
     type: "website",
   },
-  alternates: { canonical: "https://malu-investment-2.vercel.app/blog" },
+  alternates: { canonical: "https://www.mi-way.org/blog" },
 };
 
 const articles = [

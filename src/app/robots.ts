@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://malu-investment-2.vercel.app/sitemap.xml",
+    sitemap: "https://www.mi-way.org/sitemap.xml",
   };
 }

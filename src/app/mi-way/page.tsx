@@ -12,7 +12,7 @@ export const metadata = {
     description: "Namibia's first local fleet management platform. Dispatch, track, manage.",
     type: "website",
   },
-  alternates: { canonical: "https://malu-investment-2.vercel.app/mi-way" },
+  alternates: { canonical: "https://www.mi-way.org/mi-way" },
 };
 
 export default function MiWayPage() {

@@ -15,7 +15,7 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://malu-investment-2.vercel.app/driver-to-owner",
+    canonical: "https://www.mi-way.org/driver-to-owner",
   },
 };
 

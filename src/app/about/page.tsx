@@ -12,7 +12,7 @@ export const metadata = {
     description: "Our story: from one taxi in Oshakati to a multi-service enterprise across Northern Namibia.",
     type: "website",
   },
-  alternates: { canonical: "https://malu-investment-2.vercel.app/about" },
+  alternates: { canonical: "https://www.mi-way.org/about" },
 };
 
 export default function AboutPage() {

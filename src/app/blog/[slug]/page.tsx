@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.description || post.content[0]?.slice(0, 160) || "",
       type: "article",
     },
-    alternates: { canonical: `https://malu-investment-2.vercel.app/blog/${slug}` },
+    alternates: { canonical: `https://www.mi-way.org/blog/${slug}` },
   };
 }
 
