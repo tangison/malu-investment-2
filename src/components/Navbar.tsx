@@ -83,13 +83,14 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Mobile hamburger */}
+            {/* Mobile hamburger - aria-controls only set when the menu is actually open
+                so that any ARIA reference always resolves to a real DOM element. */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden p-2 text-text-primary hover:text-amber transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
-              aria-controls="mobile-menu"
+              aria-controls={mobileOpen ? "mobile-menu" : undefined}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square">
                 {mobileOpen ? (

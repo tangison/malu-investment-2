@@ -6,11 +6,15 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MiaChatbot from "@/components/MiaChatbot";
 
-const blogPosts: Record<string, { title: string; category: string; date: string; description: string; content: string[] }> = {
+type BlogPost = { title: string; category: string; date: string; dateIso: string; readTime: number; description: string; content: string[] };
+
+const blogPosts: Record<string, BlogPost> = {
   "how-to-book-taxi-oshakati": {
     title: "Book a Taxi in Oshakati",
     category: "Guide",
     date: "June 2026",
+    dateIso: "2026-06-15",
+    readTime: 4,
     description: "A practical guide to booking taxi rides across Oshakati, Ongwediva, and Ondangwa with Malu Investment via WhatsApp.",
     content: [
       "Getting around northern Namibia just got easier. If you're in Oshakati, Ongwediva, or Ondangwa and need a reliable ride, here's everything you need to know about booking with Malu Investment.",
@@ -25,6 +29,8 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     title: "Building Namibia's Fleet App",
     category: "Tech",
     date: "June 2026",
+    dateIso: "2026-06-22",
+    readTime: 5,
     description: "From one taxi in Oshakati to a dispatch platform covering three cities. The story behind MI-WAY.",
     content: [
       "MI-WAY started from a simple frustration: when you're running a taxi service across three cities with just a phone and a WhatsApp group, things fall through the cracks. Missed rides, untracked vehicles, no accountability. We needed a system, so we built one.",
@@ -39,6 +45,8 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
     title: "Northern Namibia Business Guide",
     category: "Insights",
     date: "June 2026",
+    dateIso: "2026-06-29",
+    readTime: 5,
     description: "Why Oshakati, Ongwediva, and Ondangwa are becoming the next business frontier in Namibia.",
     content: [
       "For decades, Namibia's economic story has been told from Windhoek southward. But the north is changing fast. Oshakati, Ongwediva, and Ondangwa form a triangle of growing urban centers with a combined population that rivals Windhoek, and they're underserved.",
@@ -93,7 +101,15 @@ async function BlogPostContent({ params }: { params: Promise<{ slug: string }> }
           </Link>
           <span className="font-[family-name:var(--font-space-grotesk)] text-[9px] tracking-[0.15em] text-amber uppercase font-bold block mb-3">{post.category}</span>
           <h1 className="font-display text-[clamp(2rem,5vw,3.5rem)] text-text-primary leading-[0.95] mb-4">{post.title}</h1>
-          <span className="font-[family-name:var(--font-space-grotesk)] text-sm text-text-muted block mb-8">{post.date}</span>
+          <div className="flex items-center gap-3 mb-8 font-[family-name:var(--font-space-grotesk)] text-sm text-text-muted">
+            <span>
+              By <span className="text-text-primary">Malu Investment Editorial</span>
+            </span>
+            <span aria-hidden="true">&middot;</span>
+            <time dateTime={post.dateIso}>{post.date}</time>
+            <span aria-hidden="true">&middot;</span>
+            <span>{post.readTime} min read</span>
+          </div>
           <div className="space-y-6">
             {post.content.map((paragraph, i) => (
               <p key={i} className="font-[family-name:var(--font-space-grotesk)] text-base text-text-secondary leading-[1.8]">{paragraph}</p>

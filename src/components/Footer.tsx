@@ -30,8 +30,8 @@ export default function Footer() {
           </div>
 
           {/* Nav links inline + Book a Ride CTA */}
-          <div className="flex items-center gap-4">
-            <nav aria-label="Footer navigation" className="flex items-center gap-5">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <nav aria-label="Footer navigation" className="flex items-center gap-5 flex-wrap justify-center">
               {[
                 { href: "/", label: "Home" },
                 { href: "/services", label: "Services" },
@@ -40,6 +40,7 @@ export default function Footer() {
                 { href: "/about", label: "About" },
                 { href: "/blog", label: "Blog" },
                 { href: "/contact", label: "Contact" },
+                { href: "/privacy", label: "Privacy" },
               ].map((link) => (
                 <Link
                   key={link.href}
