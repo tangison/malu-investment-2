@@ -206,9 +206,11 @@ export default function ContactPage() {
                     placeholder="Tell us what you need."
                   />
                 </div>
-                {/* Honeypot field - hidden from real users, visible to bots */}
-                <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
-                  <label htmlFor="contact-website">Website</label>
+                {/* Honeypot field - off-screen position + tabIndex=-1 keeps real users
+                    out; bots that auto-fill forms tend to fill it. We avoid aria-hidden
+                    on the wrapper because that violates aria-hidden-focus rules. */}
+                <div style={{ position: "absolute", left: "-9999px", top: "-9999px", height: 0, overflow: "hidden" }}>
+                  <label htmlFor="contact-website">Website (do not fill)</label>
                   <input
                     id="contact-website"
                     name="website"

@@ -118,35 +118,36 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Stats strip */}
-          <motion.dl
+          {/* Stats strip - plain divs (not dl/dt/dd) because the metrics are not
+                term-definition pairs and dl/dt/dd with intermediate divs trips
+                definition-list rules. */}
+          <motion.div
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
+            role="group"
+            aria-label="MI-WAY by the numbers"
             className="mt-10 grid grid-cols-3 gap-0 border-t border-base-border max-w-md"
           >
             <div className="py-4 pr-4 border-r border-base-border">
-              <dt className="sr-only">Established</dt>
-              <dd className="font-display text-2xl sm:text-3xl text-amber">2017</dd>
+              <span className="font-display text-2xl sm:text-3xl text-amber">2017</span>
               <span className="block font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.1em] text-text-muted uppercase mt-1">
                 Established
               </span>
             </div>
             <div className="py-4 px-4 border-r border-base-border">
-              <dt className="sr-only">Service lines</dt>
-              <dd className="font-display text-2xl sm:text-3xl text-text-primary">1</dd>
+              <span className="font-display text-2xl sm:text-3xl text-text-primary">1</span>
               <span className="block font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.1em] text-text-muted uppercase mt-1">
                 Live Service
               </span>
             </div>
             <div className="py-4 px-4">
-              <dt className="sr-only">Cities</dt>
-              <dd className="font-display text-2xl sm:text-3xl text-text-primary">3</dd>
+              <span className="font-display text-2xl sm:text-3xl text-text-primary">3</span>
               <span className="block font-[family-name:var(--font-space-grotesk)] text-[10px] tracking-[0.1em] text-text-muted uppercase mt-1">
                 Cities
               </span>
             </div>
-          </motion.dl>
+          </motion.div>
         </div>
       </div>
     </section>
